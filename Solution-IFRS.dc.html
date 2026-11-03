@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>IFRS Standards · LO-CARB</title>
 <script src="./support.js"></script>
 <link rel="stylesheet" href="assets/site.css">
@@ -324,6 +325,16 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
   .lc .os9-ch{font-size:calc(30px*var(--s))!important}
 }
 @media (max-width:380px){.lc .cb-bg{grid-template-columns:minmax(0,1fr)!important}}
+
+/* ===== Mobile type scale (≤680px) ===== */
+@media (max-width:680px){
+  .lc .sh-intro :is(.os-lead2,.lead,.bh-lead,.cx6-lead){font-size:calc(16px*var(--s))!important;line-height:1.65!important}
+  .lc .ifp-state,.lc .cs-state{font-size:calc(16px*var(--s))!important}
+  .lc .ifp-state b,.lc .cs-state b,.lc .is-lead b,.lc .rp-lead b,.lc .r2-state{font-size:calc(22px*var(--s))!important}
+  .lc .display.h2,.lc h2.display{font-size:calc(26px*var(--s))!important;line-height:1.2}
+  .lc .th-root .display.h2,.lc .th-root h2.display{line-height:1.35!important}
+  .lc .psec{padding:64px 0}
+}
 </style>
 </helmet>
 <div class="lc" id="page-top" style="--s: {{scale}}">
