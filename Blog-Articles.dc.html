@@ -478,6 +478,15 @@ html body .lc .th-root .cl3-ttl{font-size:calc(clamp(26px,2.3vw,34px)*var(--s))!
 html body .lc :is(small,.csd-st small):not(.th-root *):not(.label *):not(.btn *):not(.chip *){font-family:"Anakotmai",sans-serif}
 /* EN headings: accent words (STIX Two Text italic) follow the heading's case — uppercase headings stay fully uppercase */
 html body .lc :is(h1,h2,h3,h4,.display,.hh,[class*="-h"],[class*="-ttl"],[class*="-title"]):not(.th-root *) :is(.it,em,i){text-transform:inherit!important;letter-spacing:.005em}
+/* Home: number cards float above everything, shadow never clipped */
+html body .lc section.hero.hx12{overflow-x:clip!important;overflow-y:visible!important}
+html body .lc .hx12-stats{position:relative!important;z-index:40!important;box-shadow:0 30px 60px -30px rgba(16,60,35,.45),0 10px 24px -14px rgba(16,60,35,.25),inset 0 1px 0 #fff!important}
+html body .lc section.hero.hx12{position:relative;z-index:5}
+html body .lc section.story.ab5{position:relative;z-index:4}
+html body .lc section.story.ab5{overflow-x:clip!important;overflow-y:visible!important}
+html body .lc .ab5-stage{position:relative;z-index:30}
+html body .lc .ab5-float{z-index:40!important;box-shadow:0 34px 64px -28px rgba(16,60,35,.55),0 12px 26px -14px rgba(16,60,35,.3),inset 0 1px 0 #fff!important}
+html body .lc section.hero.hx12 :is(.hx12-cl.c5,.hx12-cl.c6){-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 80%);mask-image:linear-gradient(180deg,#000 55%,transparent 80%)}
 /* FX2-END */
 /* MOB3-START */
 /* ===== Mobile v3 (≤680px): seamless glow, soft curves, 2-up buttons, centred copy ===== */
@@ -560,6 +569,17 @@ html body .lc :is(h1,h2,h3,h4,.display,.hh,[class*="-h"],[class*="-ttl"],[class*
   .lc :is(.tlink,.mlink,.cl3-link,[class$="-all"],[class*="-more"] > a){min-height:44px;display:inline-flex;align-items:center;white-space:nowrap}
 }
 /* MOB3-END */
+/* CV27-START */
+/* Contact CTA curve = the previous section itself. The CTA slides up under the section above and its top is masked
+   with the curve shape, so whatever that section's background is (white, cream, photo, gradient) continues into the curve. */
+html body .lc section.os9-cta{--cv:clamp(48px,7.5vw,116px);position:relative;z-index:3;margin-top:calc(-1 * var(--cv))!important;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 116' preserveAspectRatio='none'%3E%3Cpath d='M0 44C360 120 1080 120 1440 44V116H0Z'/%3E%3C/svg%3E") 0 0/100% var(--cv) no-repeat,linear-gradient(#000,#000) 0 calc(var(--cv) - 1px)/100% 100% no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 116' preserveAspectRatio='none'%3E%3Cpath d='M0 44C360 120 1080 120 1440 44V116H0Z'/%3E%3C/svg%3E") 0 0/100% var(--cv) no-repeat,linear-gradient(#000,#000) 0 calc(var(--cv) - 1px)/100% 100% no-repeat}
+html body .lc section.os9-cta > .os9-curve{display:none!important}
+html body .lc section:has(+ section.os9-cta)::after{content:"";display:block;height:var(--cv27,clamp(48px,7.5vw,116px))}
+@media (max-width:680px){html body .lc section.os9-cta{--cv:48px}html body .lc section:has(+ section.os9-cta){--cv27:48px}}
+
+/* CV27-END */
 </style>
 </helmet>
 <div class="lc" id="page-top" style="--s: {{scale}}">
@@ -864,6 +884,22 @@ class Component extends DCLogic {
   // SCALE-START
   saveScale(v) { try { localStorage.setItem('locarb-scale', String(v)); } catch (e) {} this.setState({ scale: v }); }
   // SCALE-END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
