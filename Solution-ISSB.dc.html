@@ -350,55 +350,6 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
   .lc .th-root .display.h2,.lc .th-root h2.display{line-height:1.35!important}
   .lc .psec{padding:64px 0}
 }
-/* CBAR-START */
-/* ===== Contact info bar — one unified panel: phone · email · location ===== */
-.lc .cbar{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-radius:26px;overflow:hidden;background:rgba(255,255,255,.78);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(255,255,255,.95);box-shadow:0 30px 60px -44px rgba(16,60,35,.5),inset 0 1px 0 #fff;text-align:left}
-.lc .cbar > li{margin:0;min-width:0;width:auto}
-.lc .cbar > li + li{border-left:1px solid rgba(10,125,63,.1)}
-.lc .cbar-i{height:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:24px 26px 22px;text-decoration:none;color:inherit;background:none;border:0;box-shadow:none;transition:background .3s}
-.lc .cbar-i:hover{background:rgba(237,246,239,.9)}
-.lc .cbar-top{display:flex;align-items:center;gap:10px}
-.lc .cbar-ic{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#0EA552,#0A7D3F);box-shadow:0 10px 20px -12px rgba(10,125,63,.9)}
-.lc .cbar-top small{font-size:calc(13px*var(--s))!important;font-weight:600;color:var(--forest);letter-spacing:.01em;text-transform:none;line-height:1.3}
-.lc .cbar-val{display:block;font-family:"Termina",sans-serif!important;font-weight:700;font-size:calc(18px*var(--s));line-height:1.3;letter-spacing:-.005em;color:#0B1F15;overflow-wrap:anywhere}
-.lc .cbar-addr{display:block;font-weight:500;font-size:calc(15px*var(--s));line-height:1.6;color:#1F2B23}
-.lc .cbar-addr span{display:block}
-.lc .cbar-act{margin-top:auto;padding-top:4px;display:inline-flex;align-items:center;gap:6px;font-size:calc(13.5px*var(--s));font-weight:500;color:var(--forest)}
-.lc .cbar-act svg{transition:transform .3s}
-.lc .cbar-i:hover .cbar-act svg{transform:translateX(3px)}
-.lc .cbar-i:focus-visible{outline:2px solid var(--forest);outline-offset:-4px;border-radius:22px}
-/* stacked variant (Contact page side column) */
-.lc .cbar.cbar-col{grid-template-columns:minmax(0,1fr)}
-.lc .cbar.cbar-col > li + li{border-left:0;border-top:1px solid rgba(10,125,63,.1)}
-.lc .cbar.cbar-col .cbar-i{display:grid;grid-template-columns:38px minmax(0,1fr) auto;grid-template-areas:"ic lb act" "ic vl act";column-gap:14px;row-gap:4px;align-items:center;padding:18px 20px}
-.lc .cbar.cbar-col .cbar-top{display:contents}
-.lc .cbar.cbar-col .cbar-ic{grid-area:ic;align-self:start}
-.lc .cbar.cbar-col .cbar-top small{grid-area:lb}
-.lc .cbar.cbar-col .cbar-val,.lc .cbar.cbar-col .cbar-addr{grid-area:vl}
-.lc .cbar.cbar-col .cbar-val{font-size:calc(16px*var(--s))}
-.lc .cbar.cbar-col .cbar-addr{font-size:calc(14.5px*var(--s))}
-.lc .cbar.cbar-col .cbar-act{grid-area:act;margin:0;padding:0;width:36px;height:36px;border-radius:999px;justify-content:center;border:1px solid rgba(10,125,63,.18);background:#fff;font-size:0;gap:0}
-.lc .cbar.cbar-col .cbar-act b{display:none}
-.lc .cbar.cbar-col .cbar-i:hover .cbar-act{background:var(--forest);color:#fff}
-/* os9 contact band: the bar sits under the buttons */
-.lc .os9-qs-w{grid-column:1 / -1;width:100%;max-width:none;margin:40px 0 0;align-self:stretch}
-.lc .os9-qs-w .cbar{margin:0}
-@media (max-width:900px){
-  .lc .cbar{grid-template-columns:minmax(0,1fr)}
-  .lc .cbar > li + li{border-left:0;border-top:1px solid rgba(10,125,63,.1)}
-  .lc .cbar:not(.cbar-col) .cbar-i{display:grid;grid-template-columns:38px minmax(0,1fr) auto;grid-template-areas:"ic lb act" "ic vl act";column-gap:14px;row-gap:4px;align-items:center;padding:16px 18px}
-  .lc .cbar:not(.cbar-col) .cbar-top{display:contents}
-  .lc .cbar:not(.cbar-col) .cbar-ic{grid-area:ic;align-self:start}
-  .lc .cbar:not(.cbar-col) .cbar-top small{grid-area:lb}
-  .lc .cbar:not(.cbar-col) .cbar-val,.lc .cbar:not(.cbar-col) .cbar-addr{grid-area:vl}
-  .lc .cbar:not(.cbar-col) .cbar-act{grid-area:act;margin:0;padding:0;width:36px;height:36px;border-radius:999px;justify-content:center;border:1px solid rgba(10,125,63,.18);background:#fff;font-size:0;gap:0}
-  .lc .cbar:not(.cbar-col) .cbar-act b{display:none}
-  .lc .cbar-val{font-size:calc(16px*var(--s))}
-  .lc .cbar-addr{font-size:calc(14.5px*var(--s))}
-}
-@media (max-width:900px){.lc .cbar-addr span{display:inline}.lc .cbar-addr span:first-child::after{content:" "}}
-@media (max-width:680px){.lc .cbar{border-radius:22px}.lc .cbar .cbar-i{padding:14px 14px!important;column-gap:12px!important}.lc .cbar-ic{width:36px;height:36px;border-radius:11px}}
-/* CBAR-END */
 /* ISCUR3-START */
 /* ===== ISSB curriculum v4 — compact, balanced 3×2 module grid ===== */
 .lc section.is-cur{padding:88px 0 96px}
@@ -431,6 +382,32 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
   .lc .cu-count b{font-size:calc(40px*var(--s))}
 }
 /* ISCUR3-END */
+/* CBAR-START */
+/* ===== Contact info — three separate boxes, 25% · 25% · 50%, same type weight for every value ===== */
+.lc .cbar{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr);gap:14px;background:none;border:0;box-shadow:none;border-radius:0;overflow:visible;text-align:left}
+.lc .cbar > li{margin:0;min-width:0;width:auto;border:0!important;display:flex}
+.lc .cbar-i{flex:1;box-sizing:border-box;display:grid;position:relative;grid-template-columns:42px minmax(0,1fr);grid-template-areas:"ic lb" "ic vl";column-gap:14px;row-gap:3px;align-items:center;padding:18px 44px 18px 18px;border-radius:22px;text-decoration:none;color:inherit;background:rgba(255,255,255,.8);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(255,255,255,.95);box-shadow:0 24px 48px -36px rgba(16,60,35,.5),inset 0 1px 0 #fff;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,background .3s}
+.lc .cbar-i:hover{transform:translateY(-3px);background:#fff;box-shadow:0 30px 56px -36px rgba(16,60,35,.6),inset 0 1px 0 #fff}
+.lc .cbar-top{display:contents}
+.lc .cbar-ic{grid-area:ic;align-self:center;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#0EA552,#0A7D3F);box-shadow:0 10px 20px -12px rgba(10,125,63,.9)}
+.lc .cbar-top small{grid-area:lb;align-self:end;font-size:calc(12.5px*var(--s))!important;font-weight:500;color:var(--forest);letter-spacing:.01em;text-transform:none;line-height:1.3}
+.lc :is(.cbar-val,.cbar-addr){grid-area:vl;align-self:start;display:block;font-family:inherit!important;font-weight:500!important;font-size:calc(15.5px*var(--s))!important;line-height:1.5;letter-spacing:0;color:#0B1F15;overflow-wrap:anywhere}
+
+.lc .cbar-addr span{display:inline}
+.lc .cbar-addr span:first-child::after{content:" "}
+.lc .cbar-act{position:absolute;top:12px;right:12px;margin:0;padding:0;width:28px;height:28px;border-radius:999px;display:grid;place-items:center;border:1px solid rgba(10,125,63,.18);background:#fff;color:var(--forest);font-size:0;transition:background .3s,color .3s,transform .3s}
+.lc .cbar-act b{display:none}
+.lc .cbar-i:hover .cbar-act{background:var(--forest);color:#fff;border-color:var(--forest)}
+.lc .cbar-i:focus-visible{outline:2px solid var(--forest);outline-offset:2px}
+/* stacked variant (Contact page side column) */
+.lc .cbar.cbar-col{grid-template-columns:minmax(0,1fr);gap:10px}
+.lc .os9-qs-w{grid-column:1 / -1;width:100%;max-width:none;margin:40px 0 0;align-self:stretch}
+.lc .os9-qs-w .cbar{margin:0}
+@media (max-width:1080px){.lc .cbar:not(.cbar-col){grid-template-columns:repeat(2,minmax(0,1fr))}.lc .cbar:not(.cbar-col) > li:nth-child(3){grid-column:1 / -1}}
+@media (max-width:680px){.lc .cbar:not(.cbar-col){grid-template-columns:minmax(0,1fr);gap:10px}.lc .cbar:not(.cbar-col) > li:nth-child(3){grid-column:auto}.lc .cbar-i{padding:14px;column-gap:12px;border-radius:20px}.lc .cbar-ic{width:38px;height:38px;border-radius:12px}.lc :is(.cbar-val,.cbar-addr){font-size:calc(15px*var(--s))!important}}
+/* phone, email and address share one weight (Light, same as the address text) */
+.lc .cbar :is(.cbar-val,.cbar-addr),.lc .th-root .cbar :is(.cbar-val,.cbar-addr){font-weight:300!important;color:#0B1F15}
+/* CBAR-END */
 /* RVFX-START */
 /* ===== Scroll reveal: each section floats up when it reaches the viewport (IntersectionObserver, all browsers) ===== */
 .rv-on .lc [data-rvs]{opacity:0;transform:translate3d(0,56px,0);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.16,1,.3,1)}
@@ -461,6 +438,34 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
 .lc footer a.f3-on{color:var(--forest)!important;font-weight:600;position:relative}
 .lc footer a.f3-on::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#0EA552;margin-right:8px;vertical-align:middle;transform:translateY(-1px)}
 /* NAVCUR-END */
+/* FX2-START */
+/* ===== English running text in STIX Two Text (headings stay Termina; Thai stays Anakotmai) ===== */
+html body .lc{font-family:"STIX Two Text","Anakotmai",serif}
+html body .lc .th-root{font-family:"Termina Text","Anakotmai",sans-serif}
+:where(.lc) :where(button,input,select,textarea,label,nav,header,footer .f2-bot,.btn,.chip,.label,small,time,.crumbs,.bh-meta,[class*="-tag"],[class*="-cat"],[class*="-meta"],[class*="-date"]){font-family:"Termina Text","Anakotmai",sans-serif}
+:where(.lc) :where(input,textarea)::placeholder{font-family:"Termina Text","Anakotmai",sans-serif}
+/* ===== Breathing room before the footer on inner pages ===== */
+html body .lc section:is(.sc-ct,.os9-cta,.ct7-mapband){padding-bottom:128px!important}
+@media (max-width:680px){html body .lc section:is(.sc-ct,.os9-cta,.ct7-mapband){padding-bottom:88px!important}}
+html body .lc :is(.ifx2-sub,.r2-state,[class*="mapcard"] small):not(.th-root *){font-family:"STIX Two Text",serif!important;font-weight:400!important;letter-spacing:0;text-transform:none}
+html body .lc .th-root :is(.ifx2-sub,.r2-state,[class*="mapcard"] small){font-family:"Anakotmai",sans-serif!important}
+/* Home hero: no underline on the highlighted phrase */
+html body .lc .hx-mark{background:none!important;background-image:none!important;text-decoration:none!important;border-bottom:0!important;box-shadow:none!important}
+html body .lc .hx-mark::before,html body .lc .hx-mark::after{content:none!important;display:none!important}
+/* language codes TH / EN in the navbar and footer: Termina */
+html body .lc :is(.nu-btn b,.nu-btn b *,.nu-code,.nu-code *,.f2-lang button,.f2-lang a,.f2-lang *,.mn-seg button,.mn-seg button *){font-family:"Termina",sans-serif!important;font-weight:700!important;letter-spacing:.04em}
+html body .lc .th-root.th-root.th-root :is(.nu-btn b,.nu-btn b *,.nu-code,.nu-code *,.f2-lang button,.f2-lang a,.f2-lang *,.mn-seg button,.mn-seg button *):not(svg):not(svg *){font-family:"Termina",sans-serif!important;font-weight:700!important;letter-spacing:.04em!important}
+/* ===== Thai: room for stacked vowels & tone marks (nothing clipped) ===== */
+html body .lc .th-root .bl{height:auto!important;overflow:visible!important;line-height:1.6!important;padding:0!important;margin:0!important}
+html body .lc .th-root .bl > span{line-height:inherit!important;padding:0!important;margin:0!important}
+html body .lc .th-root.th-root.th-root.th-root :is(h1,h2,h3,h4,.display,.mintro strong){line-height:1.42!important;padding-block:.04em}
+html body .lc .th-root :is(h1,h2,h3,h4) :is(.it,span){line-height:inherit}
+html body .lc .th-root .it{padding-block:.12em;margin-block:-.12em}
+html body .lc .th-root :is(.crumbs,.nd-crumbs) :is(a,b,span){line-height:1.6!important}
+html body .lc .th-root :is(.cs-np b,.lg4-mark,[class*="fig"],[class*="-num"] b,[class*="-n"] b){line-height:1.35!important}
+html body .lc .th-root :is(.cl3-ct small,.cl3-ct b,.bx3-x){line-height:1.6!important;padding-bottom:.08em}
+html body .lc .th-root .bx3-x{padding-bottom:0}
+/* FX2-END */
 /* MOB3-START */
 /* ===== Mobile v3 (≤680px): seamless glow, soft curves, 2-up buttons, centred copy ===== */
 @media (max-width:680px){
@@ -669,7 +674,7 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
 <sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
 <div class="okmsg"><span class="oi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><div><b>Thank you</b><p>Your message has been well received. Our ISSB training team will get back to you.</p></div><button onClick="{{closeOk}}" aria-label="Close message">✕</button></div>
 </sc-if>
-</div></div><ul class="cbar" role="list"><li><a class="cbar-i" href="tel:+66969966249"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span><small>Phone</small></span><b class="cbar-val">096 996 6249</b><span class="cbar-act"><b>Call us</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="mailto:contact@locarb.green"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><small>Email</small></span><b class="cbar-val">contact@locarb.green</b><span class="cbar-act"><b>Send an email</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="https://www.google.com/maps/search/?api=1&amp;query=LO-CARB+Rooftop+Soi+Sala+Daeng+1+Silom+Bang+Rak+Bangkok+10500" target="_blank" rel="noopener"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><small>Location</small></span><span class="cbar-addr"><span>1/3-7, Rooftop, Soi Saladaeng 1 (Godche)</span><span>Silom, Bang Rak, Bangkok 10500</span></span><span class="cbar-act"><b>View on map</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></a></li></ul></div></section>
+</div></div><ul class="cbar" role="list"><li><a class="cbar-i" href="tel:+66969966249"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span><small>Phone</small></span><span class="cbar-val">096 996 6249</span><span class="cbar-act"><b>Call us</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="mailto:contact@locarb.green"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><small>Email</small></span><span class="cbar-val">contact@locarb.green</span><span class="cbar-act"><b>Send an email</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="https://www.google.com/maps/search/?api=1&amp;query=LO-CARB+Rooftop+Soi+Sala+Daeng+1+Silom+Bang+Rak+Bangkok+10500" target="_blank" rel="noopener"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><small>Location</small></span><span class="cbar-addr"><span>1/3-7, Rooftop, Soi Saladaeng 1 (Godche)</span><span>Silom, Bang Rak, Bangkok 10500</span></span><span class="cbar-act"><b>View on map</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></a></li></ul></div></section>
 
 <footer class="foot dark f2 f3">
 <div class="wrap">
@@ -815,7 +820,7 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
 <sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
 <div class="okmsg"><span class="oi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><div><b>ข⁠อ⁠บ⁠คุ⁠ณ​ที่​ติ⁠ด⁠ต่⁠อ LO-⁠CARB</b><p>เ⁠ร⁠า​ไ⁠ด้⁠รั⁠บ​ข้⁠อ⁠ค⁠ว⁠า⁠ม​ข⁠อ⁠ง​คุ⁠ณ​แ⁠ล้⁠ว ที⁠ม​อ⁠บ⁠ร⁠ม ISSB จ⁠ะ​ติ⁠ด⁠ต่⁠อ​ก⁠ลั⁠บ</p></div><button onClick="{{closeOk}}" aria-label="ปิดข้อความ">✕</button></div>
 </sc-if>
-</div></div><ul class="cbar" role="list"><li><a class="cbar-i" href="tel:+66969966249"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span><small>โ⁠ท⁠ร⁠ศั⁠พ⁠ท์</small></span><b class="cbar-val">096 996 6249</b><span class="cbar-act"><b>โ⁠ท⁠ร​ห⁠า​เ⁠ร⁠า</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="mailto:contact@locarb.green"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><small>อี⁠เ⁠ม⁠ล</small></span><b class="cbar-val">contact@locarb.green</b><span class="cbar-act"><b>ส่⁠ง​อี⁠เ⁠ม⁠ล</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="https://www.google.com/maps/search/?api=1&amp;query=LO-CARB+Rooftop+Soi+Sala+Daeng+1+Silom+Bang+Rak+Bangkok+10500" target="_blank" rel="noopener"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><small>ที่​ตั้⁠ง</small></span><span class="cbar-addr"><span>เ⁠ล⁠ข​ที่ 1/3-7 ชั้⁠น​ด⁠า⁠ด⁠ฟ้⁠า ซ⁠อ⁠ย​ศ⁠า⁠ล⁠า⁠แ⁠ด⁠ง 1 (Godche)</span><span>แ⁠ข⁠ว⁠ง​สี⁠ล⁠ม เ⁠ข⁠ต​บ⁠า⁠ง⁠รั⁠ก ก⁠รุ⁠ง⁠เ⁠ท⁠พ⁠ม⁠ห⁠า⁠น⁠ค⁠ร 10500</span></span><span class="cbar-act"><b>ดู​แ⁠ผ⁠น⁠ที่</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></a></li></ul></div></section>
+</div></div><ul class="cbar" role="list"><li><a class="cbar-i" href="tel:+66969966249"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span><small>โ⁠ท⁠ร⁠ศั⁠พ⁠ท์</small></span><span class="cbar-val">096 996 6249</span><span class="cbar-act"><b>โ⁠ท⁠ร​ห⁠า​เ⁠ร⁠า</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="mailto:contact@locarb.green"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><small>อี⁠เ⁠ม⁠ล</small></span><span class="cbar-val">contact@locarb.green</span><span class="cbar-act"><b>ส่⁠ง​อี⁠เ⁠ม⁠ล</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="https://www.google.com/maps/search/?api=1&amp;query=LO-CARB+Rooftop+Soi+Sala+Daeng+1+Silom+Bang+Rak+Bangkok+10500" target="_blank" rel="noopener"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><small>ที่​ตั้⁠ง</small></span><span class="cbar-addr"><span>เ⁠ล⁠ข​ที่ 1/3-7 ชั้⁠น​ด⁠า⁠ด⁠ฟ้⁠า ซ⁠อ⁠ย​ศ⁠า⁠ล⁠า⁠แ⁠ด⁠ง 1 (Godche)</span><span>แ⁠ข⁠ว⁠ง​สี⁠ล⁠ม เ⁠ข⁠ต​บ⁠า⁠ง⁠รั⁠ก ก⁠รุ⁠ง⁠เ⁠ท⁠พ⁠ม⁠ห⁠า⁠น⁠ค⁠ร 10500</span></span><span class="cbar-act"><b>ดู​แ⁠ผ⁠น⁠ที่</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></a></li></ul></div></section>
 
 <footer class="foot dark f2 f3">
 <div class="wrap">
@@ -850,6 +855,20 @@ class Component extends DCLogic {
   // SCALE-START
   saveScale(v) { try { localStorage.setItem('locarb-scale', String(v)); } catch (e) {} this.setState({ scale: v }); }
   // SCALE-END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -292,55 +292,6 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
   .lc .th-root .display.h2,.lc .th-root h2.display{line-height:1.35!important}
   .lc .psec{padding:64px 0}
 }
-/* CBAR-START */
-/* ===== Contact info bar — one unified panel: phone · email · location ===== */
-.lc .cbar{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-radius:26px;overflow:hidden;background:rgba(255,255,255,.78);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(255,255,255,.95);box-shadow:0 30px 60px -44px rgba(16,60,35,.5),inset 0 1px 0 #fff;text-align:left}
-.lc .cbar > li{margin:0;min-width:0;width:auto}
-.lc .cbar > li + li{border-left:1px solid rgba(10,125,63,.1)}
-.lc .cbar-i{height:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:24px 26px 22px;text-decoration:none;color:inherit;background:none;border:0;box-shadow:none;transition:background .3s}
-.lc .cbar-i:hover{background:rgba(237,246,239,.9)}
-.lc .cbar-top{display:flex;align-items:center;gap:10px}
-.lc .cbar-ic{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#0EA552,#0A7D3F);box-shadow:0 10px 20px -12px rgba(10,125,63,.9)}
-.lc .cbar-top small{font-size:calc(13px*var(--s))!important;font-weight:600;color:var(--forest);letter-spacing:.01em;text-transform:none;line-height:1.3}
-.lc .cbar-val{display:block;font-family:"Termina",sans-serif!important;font-weight:700;font-size:calc(18px*var(--s));line-height:1.3;letter-spacing:-.005em;color:#0B1F15;overflow-wrap:anywhere}
-.lc .cbar-addr{display:block;font-weight:500;font-size:calc(15px*var(--s));line-height:1.6;color:#1F2B23}
-.lc .cbar-addr span{display:block}
-.lc .cbar-act{margin-top:auto;padding-top:4px;display:inline-flex;align-items:center;gap:6px;font-size:calc(13.5px*var(--s));font-weight:500;color:var(--forest)}
-.lc .cbar-act svg{transition:transform .3s}
-.lc .cbar-i:hover .cbar-act svg{transform:translateX(3px)}
-.lc .cbar-i:focus-visible{outline:2px solid var(--forest);outline-offset:-4px;border-radius:22px}
-/* stacked variant (Contact page side column) */
-.lc .cbar.cbar-col{grid-template-columns:minmax(0,1fr)}
-.lc .cbar.cbar-col > li + li{border-left:0;border-top:1px solid rgba(10,125,63,.1)}
-.lc .cbar.cbar-col .cbar-i{display:grid;grid-template-columns:38px minmax(0,1fr) auto;grid-template-areas:"ic lb act" "ic vl act";column-gap:14px;row-gap:4px;align-items:center;padding:18px 20px}
-.lc .cbar.cbar-col .cbar-top{display:contents}
-.lc .cbar.cbar-col .cbar-ic{grid-area:ic;align-self:start}
-.lc .cbar.cbar-col .cbar-top small{grid-area:lb}
-.lc .cbar.cbar-col .cbar-val,.lc .cbar.cbar-col .cbar-addr{grid-area:vl}
-.lc .cbar.cbar-col .cbar-val{font-size:calc(16px*var(--s))}
-.lc .cbar.cbar-col .cbar-addr{font-size:calc(14.5px*var(--s))}
-.lc .cbar.cbar-col .cbar-act{grid-area:act;margin:0;padding:0;width:36px;height:36px;border-radius:999px;justify-content:center;border:1px solid rgba(10,125,63,.18);background:#fff;font-size:0;gap:0}
-.lc .cbar.cbar-col .cbar-act b{display:none}
-.lc .cbar.cbar-col .cbar-i:hover .cbar-act{background:var(--forest);color:#fff}
-/* os9 contact band: the bar sits under the buttons */
-.lc .os9-qs-w{grid-column:1 / -1;width:100%;max-width:none;margin:40px 0 0;align-self:stretch}
-.lc .os9-qs-w .cbar{margin:0}
-@media (max-width:900px){
-  .lc .cbar{grid-template-columns:minmax(0,1fr)}
-  .lc .cbar > li + li{border-left:0;border-top:1px solid rgba(10,125,63,.1)}
-  .lc .cbar:not(.cbar-col) .cbar-i{display:grid;grid-template-columns:38px minmax(0,1fr) auto;grid-template-areas:"ic lb act" "ic vl act";column-gap:14px;row-gap:4px;align-items:center;padding:16px 18px}
-  .lc .cbar:not(.cbar-col) .cbar-top{display:contents}
-  .lc .cbar:not(.cbar-col) .cbar-ic{grid-area:ic;align-self:start}
-  .lc .cbar:not(.cbar-col) .cbar-top small{grid-area:lb}
-  .lc .cbar:not(.cbar-col) .cbar-val,.lc .cbar:not(.cbar-col) .cbar-addr{grid-area:vl}
-  .lc .cbar:not(.cbar-col) .cbar-act{grid-area:act;margin:0;padding:0;width:36px;height:36px;border-radius:999px;justify-content:center;border:1px solid rgba(10,125,63,.18);background:#fff;font-size:0;gap:0}
-  .lc .cbar:not(.cbar-col) .cbar-act b{display:none}
-  .lc .cbar-val{font-size:calc(16px*var(--s))}
-  .lc .cbar-addr{font-size:calc(14.5px*var(--s))}
-}
-@media (max-width:900px){.lc .cbar-addr span{display:inline}.lc .cbar-addr span:first-child::after{content:" "}}
-@media (max-width:680px){.lc .cbar{border-radius:22px}.lc .cbar .cbar-i{padding:14px 14px!important;column-gap:12px!important}.lc .cbar-ic{width:36px;height:36px;border-radius:11px}}
-/* CBAR-END */
 /* BLOGV2-START */
 /* ===== Blog v2 — hub, portfolio listing, case study cards ===== */
 .lc section.pf-body,.lc section.pf-hub{padding:72px 0 88px;background:transparent}
@@ -402,6 +353,66 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
   .lc .pf-more{margin-top:32px}
 }
 /* BLOGV2-END */
+/* CBAR-START */
+/* ===== Contact info — three separate boxes, 25% · 25% · 50%, same type weight for every value ===== */
+.lc .cbar{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr);gap:14px;background:none;border:0;box-shadow:none;border-radius:0;overflow:visible;text-align:left}
+.lc .cbar > li{margin:0;min-width:0;width:auto;border:0!important;display:flex}
+.lc .cbar-i{flex:1;box-sizing:border-box;display:grid;position:relative;grid-template-columns:42px minmax(0,1fr);grid-template-areas:"ic lb" "ic vl";column-gap:14px;row-gap:3px;align-items:center;padding:18px 44px 18px 18px;border-radius:22px;text-decoration:none;color:inherit;background:rgba(255,255,255,.8);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(255,255,255,.95);box-shadow:0 24px 48px -36px rgba(16,60,35,.5),inset 0 1px 0 #fff;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,background .3s}
+.lc .cbar-i:hover{transform:translateY(-3px);background:#fff;box-shadow:0 30px 56px -36px rgba(16,60,35,.6),inset 0 1px 0 #fff}
+.lc .cbar-top{display:contents}
+.lc .cbar-ic{grid-area:ic;align-self:center;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#0EA552,#0A7D3F);box-shadow:0 10px 20px -12px rgba(10,125,63,.9)}
+.lc .cbar-top small{grid-area:lb;align-self:end;font-size:calc(12.5px*var(--s))!important;font-weight:500;color:var(--forest);letter-spacing:.01em;text-transform:none;line-height:1.3}
+.lc :is(.cbar-val,.cbar-addr){grid-area:vl;align-self:start;display:block;font-family:inherit!important;font-weight:500!important;font-size:calc(15.5px*var(--s))!important;line-height:1.5;letter-spacing:0;color:#0B1F15;overflow-wrap:anywhere}
+
+.lc .cbar-addr span{display:inline}
+.lc .cbar-addr span:first-child::after{content:" "}
+.lc .cbar-act{position:absolute;top:12px;right:12px;margin:0;padding:0;width:28px;height:28px;border-radius:999px;display:grid;place-items:center;border:1px solid rgba(10,125,63,.18);background:#fff;color:var(--forest);font-size:0;transition:background .3s,color .3s,transform .3s}
+.lc .cbar-act b{display:none}
+.lc .cbar-i:hover .cbar-act{background:var(--forest);color:#fff;border-color:var(--forest)}
+.lc .cbar-i:focus-visible{outline:2px solid var(--forest);outline-offset:2px}
+/* stacked variant (Contact page side column) */
+.lc .cbar.cbar-col{grid-template-columns:minmax(0,1fr);gap:10px}
+.lc .os9-qs-w{grid-column:1 / -1;width:100%;max-width:none;margin:40px 0 0;align-self:stretch}
+.lc .os9-qs-w .cbar{margin:0}
+@media (max-width:1080px){.lc .cbar:not(.cbar-col){grid-template-columns:repeat(2,minmax(0,1fr))}.lc .cbar:not(.cbar-col) > li:nth-child(3){grid-column:1 / -1}}
+@media (max-width:680px){.lc .cbar:not(.cbar-col){grid-template-columns:minmax(0,1fr);gap:10px}.lc .cbar:not(.cbar-col) > li:nth-child(3){grid-column:auto}.lc .cbar-i{padding:14px;column-gap:12px;border-radius:20px}.lc .cbar-ic{width:38px;height:38px;border-radius:12px}.lc :is(.cbar-val,.cbar-addr){font-size:calc(15px*var(--s))!important}}
+/* phone, email and address share one weight (Light, same as the address text) */
+.lc .cbar :is(.cbar-val,.cbar-addr),.lc .th-root .cbar :is(.cbar-val,.cbar-addr){font-weight:300!important;color:#0B1F15}
+/* CBAR-END */
+/* ARTC-START */
+.bx3-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.bx3-head .display.h2{margin-top:14px;font-size:calc(clamp(26px,2.5vw,40px)*var(--s));max-width:22ch}
+.bx3-head .btn-od{background:rgba(255,255,255,.7)}
+.bx3-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.bx3-card{position:relative;display:flex;flex-direction:column;padding:10px;border-radius:26px;background:rgba(255,255,255,.66);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(255,255,255,.95);box-shadow:0 24px 48px -36px rgba(16,60,35,.5),inset 0 1px 0 #fff;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+.bx3-card:hover,.bx3-card:focus-within{transform:translateY(-6px);box-shadow:0 34px 60px -36px rgba(16,60,35,.6),inset 0 1px 0 #fff}
+.bx3-img{position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:var(--sand)}
+.bx3-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.bx3-card:hover .bx3-img img{transform:scale(1.06)}
+.bx3-cat{position:absolute;left:10px;top:10px;z-index:4;max-width:calc(100% - 20px);padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.72);backdrop-filter:blur(12px) saturate(1.4);-webkit-backdrop-filter:blur(12px) saturate(1.4);border:1px solid rgba(255,255,255,.9);font-family:"Termina",sans-serif;font-weight:700;font-size:calc(9.5px*var(--s));letter-spacing:.08em;text-transform:uppercase;color:var(--forest);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bx3-cat:hover{background:var(--forest);color:#fff}
+.bx3-b{display:flex;flex-direction:column;flex:1;padding:16px 10px 10px}
+.bx3-date{margin:0;font-size:calc(12.5px*var(--s));color:var(--muted)}
+.bx3-t{margin:8px 0 0;font-family:"Termina",sans-serif;font-weight:700;font-size:calc(15.5px*var(--s));line-height:1.3;text-transform:none;letter-spacing:0;color:#0B3B22;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.bx3-t a{color:inherit;text-decoration:none}
+.bx3-t a::after{content:"";position:absolute;inset:0;z-index:3;border-radius:26px}
+.bx3-t a:focus-visible{outline:none}
+.bx3-t a:focus-visible::after{outline:2px solid var(--forest);outline-offset:-3px}
+.bx3-card:hover .bx3-t{color:var(--forest)}
+.bx3-x{margin:10px 0 0;font-size:calc(13.5px*var(--s));line-height:1.55;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bx3-more{margin-top:auto;padding-top:16px;display:inline-flex;align-items:center;gap:6px;font-weight:500;font-size:calc(13.5px*var(--s));color:var(--forest)}
+.bx3-more svg{transition:transform .3s}
+.bx3-card:hover .bx3-more svg{transform:translate(2px,-2px)}
+.th-root .bx3-t{font-size:calc(17px*var(--s))!important;line-height:1.45!important}
+.th-root .bx3-cat{letter-spacing:0;text-transform:none}
+@media (max-width:1080px){.bx3-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.lc section.blog.bx3{padding:72px 0 80px}.bx3-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -20px;padding:4px 20px 16px;scrollbar-width:none}.bx3-row::-webkit-scrollbar{display:none}.bx3-card{flex:0 0 80%;scroll-snap-align:start}}
+@media (prefers-reduced-motion:reduce){.bx3-card,.bx3-img img{transition:none}.bx3-card:hover{transform:none}}
+@media (max-width:680px){.lc section.blog.bx3{background:radial-gradient(70% 22% at 100% 40%,rgba(191,233,207,.42),rgba(191,233,207,0) 100%),linear-gradient(180deg,#F7F5EC 0,#fff 180px)!important}}
+.lc :is(.bh-grid,.pf-artgrid) .bx3-card{height:100%;box-sizing:border-box}
+.lc .bx3-card .bx3-b{flex:1}
+.lc .bx3-cat{pointer-events:none}
+/* ARTC-END */
 /* RVFX-START */
 /* ===== Scroll reveal: each section floats up when it reaches the viewport (IntersectionObserver, all browsers) ===== */
 .rv-on .lc [data-rvs]{opacity:0;transform:translate3d(0,56px,0);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.16,1,.3,1)}
@@ -432,6 +443,34 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
 .lc footer a.f3-on{color:var(--forest)!important;font-weight:600;position:relative}
 .lc footer a.f3-on::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#0EA552;margin-right:8px;vertical-align:middle;transform:translateY(-1px)}
 /* NAVCUR-END */
+/* FX2-START */
+/* ===== English running text in STIX Two Text (headings stay Termina; Thai stays Anakotmai) ===== */
+html body .lc{font-family:"STIX Two Text","Anakotmai",serif}
+html body .lc .th-root{font-family:"Termina Text","Anakotmai",sans-serif}
+:where(.lc) :where(button,input,select,textarea,label,nav,header,footer .f2-bot,.btn,.chip,.label,small,time,.crumbs,.bh-meta,[class*="-tag"],[class*="-cat"],[class*="-meta"],[class*="-date"]){font-family:"Termina Text","Anakotmai",sans-serif}
+:where(.lc) :where(input,textarea)::placeholder{font-family:"Termina Text","Anakotmai",sans-serif}
+/* ===== Breathing room before the footer on inner pages ===== */
+html body .lc section:is(.sc-ct,.os9-cta,.ct7-mapband){padding-bottom:128px!important}
+@media (max-width:680px){html body .lc section:is(.sc-ct,.os9-cta,.ct7-mapband){padding-bottom:88px!important}}
+html body .lc :is(.ifx2-sub,.r2-state,[class*="mapcard"] small):not(.th-root *){font-family:"STIX Two Text",serif!important;font-weight:400!important;letter-spacing:0;text-transform:none}
+html body .lc .th-root :is(.ifx2-sub,.r2-state,[class*="mapcard"] small){font-family:"Anakotmai",sans-serif!important}
+/* Home hero: no underline on the highlighted phrase */
+html body .lc .hx-mark{background:none!important;background-image:none!important;text-decoration:none!important;border-bottom:0!important;box-shadow:none!important}
+html body .lc .hx-mark::before,html body .lc .hx-mark::after{content:none!important;display:none!important}
+/* language codes TH / EN in the navbar and footer: Termina */
+html body .lc :is(.nu-btn b,.nu-btn b *,.nu-code,.nu-code *,.f2-lang button,.f2-lang a,.f2-lang *,.mn-seg button,.mn-seg button *){font-family:"Termina",sans-serif!important;font-weight:700!important;letter-spacing:.04em}
+html body .lc .th-root.th-root.th-root :is(.nu-btn b,.nu-btn b *,.nu-code,.nu-code *,.f2-lang button,.f2-lang a,.f2-lang *,.mn-seg button,.mn-seg button *):not(svg):not(svg *){font-family:"Termina",sans-serif!important;font-weight:700!important;letter-spacing:.04em!important}
+/* ===== Thai: room for stacked vowels & tone marks (nothing clipped) ===== */
+html body .lc .th-root .bl{height:auto!important;overflow:visible!important;line-height:1.6!important;padding:0!important;margin:0!important}
+html body .lc .th-root .bl > span{line-height:inherit!important;padding:0!important;margin:0!important}
+html body .lc .th-root.th-root.th-root.th-root :is(h1,h2,h3,h4,.display,.mintro strong){line-height:1.42!important;padding-block:.04em}
+html body .lc .th-root :is(h1,h2,h3,h4) :is(.it,span){line-height:inherit}
+html body .lc .th-root .it{padding-block:.12em;margin-block:-.12em}
+html body .lc .th-root :is(.crumbs,.nd-crumbs) :is(a,b,span){line-height:1.6!important}
+html body .lc .th-root :is(.cs-np b,.lg4-mark,[class*="fig"],[class*="-num"] b,[class*="-n"] b){line-height:1.35!important}
+html body .lc .th-root :is(.cl3-ct small,.cl3-ct b,.bx3-x){line-height:1.6!important;padding-bottom:.08em}
+html body .lc .th-root .bx3-x{padding-bottom:0}
+/* FX2-END */
 /* MOB3-START */
 /* ===== Mobile v3 (≤680px): seamless glow, soft curves, 2-up buttons, centred copy ===== */
 @media (max-width:680px){
@@ -629,13 +668,13 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
 <a class="btn btn-p pf-cta" href="Portfolio-Detail.dc.html#uce" onClick="{{openCase_uce}}"><span class="bl"><span>Read case study</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
 </article><ul class="pf-soon-list" role="list"><li class="pf-soon"><span class="pf-mono" aria-hidden="true">TAT</span><span class="pf-soon-b"><b>Tourism Authority of Thailand (TAT)</b><small>Case study in preparation</small></span></li><li class="pf-soon"><span class="pf-mono" aria-hidden="true">TPC</span><span class="pf-soon-b"><b>Thailand Privilege Card (TPC)</b><small>Case study in preparation</small></span></li><li class="pf-soon"><span class="pf-mono" aria-hidden="true">RAOT</span><span class="pf-soon-b"><b>Rubber Authority of Thailand (RAOT)</b><small>Case study in preparation</small></span></li></ul></div></section>
 <section class="psec pf-hub pf-hub-art"><div class="wrap"><div class="pf-head rv"><div><p class="label"><span class="ln"></span>Articles</p><h2 class="display h2">Latest <span class="it" style="color:var(--forest)">articles</span></h2><p class="pf-lead">Explainers on IFRS, ISSB and carbon, plus news and events from the LO-⁠CARB team.</p></div><a class="tlink pf-all" href="Blog-Articles.dc.html">View all articles <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
-<div class="bh-body pf-artgrid"><sc-if value="{{hasHub}}" hint-placeholder-val="{{ true }}"><div class="bh-grid"><sc-for list="{{hubPosts}}" as="p" hint-placeholder-count="4"><a href="{{p.h}}" class="bh-card" target="{{p.tgt}}" rel="{{p.rel}}" onClick="{{p.open}}"><span class="bh-img"><img src="{{p.img}}" alt="" loading="lazy"></span><span class="bh-meta"><span class="bh-cat">{{p.catLabel}}</span><i class="bh-dot" aria-hidden="true"></i><span>{{p.tag}}</span></span><span class="bh-t">{{p.t}}</span><span class="bh-d">{{p.d}}<span class="bh-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></span></a></sc-for></div></sc-if></div></div></section>
+<div class="bh-body pf-artgrid"><sc-if value="{{hasHub}}" hint-placeholder-val="{{ true }}"><div class="bh-grid"><sc-for list="{{hubPosts}}" as="p" hint-placeholder-count="4"><article class="bx3-card"><div class="bx3-img"><img src="{{p.img}}" alt="" loading="lazy"><span class="bx3-cat">{{p.catLabel}} · {{p.tag}}</span></div><div class="bx3-b"><p class="bx3-date">{{p.d}}</p><h3 class="bx3-t"><a href="{{p.h}}" onClick="{{p.open}}">{{p.t}}</a></h3><p class="bx3-x">{{p.x}}</p><span class="bx3-more" aria-hidden="true">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></div></article></sc-for></div></sc-if></div></div></section>
 <section class="os9-cta"><svg class="os9-curve" viewBox="0 0 1440 116" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V44C1080 120 360 120 0 44Z" fill="#FFFFFF"></path></svg>
 <div class="os9-cbg" aria-hidden="true"><img src="assets/76a10b9728d986483bbe8ab87e4dd874.webp" alt="" loading="lazy"></div><div class="os9-cov" aria-hidden="true"></div>
 <div class="wrap os9-cg">
 <div class="rv"><h2 class="os9-ch">Talk to us about a project <span class="it" >like these</span></h2><p class="os9-cp">Tell us your goal and we will point you to the right solution.</p>
 <div class="os9-cb"><a href="Contact.dc.html" class="btn btn-p"><span class="bl"><span>Contact Us</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="Main.dc.html" class="btn btn-od"><span class="bl"><span>Explore solutions</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div>
-<div class="os9-qs-w rv2"><ul class="cbar" role="list"><li><a class="cbar-i" href="tel:+66969966249"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span><small>Phone</small></span><b class="cbar-val">096 996 6249</b><span class="cbar-act"><b>Call us</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="mailto:contact@locarb.green"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><small>Email</small></span><b class="cbar-val">contact@locarb.green</b><span class="cbar-act"><b>Send an email</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="https://www.google.com/maps/search/?api=1&amp;query=LO-CARB+Rooftop+Soi+Sala+Daeng+1+Silom+Bang+Rak+Bangkok+10500" target="_blank" rel="noopener"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><small>Location</small></span><span class="cbar-addr"><span>1/3-7, Rooftop, Soi Saladaeng 1 (Godche)</span><span>Silom, Bang Rak, Bangkok 10500</span></span><span class="cbar-act"><b>View on map</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></a></li></ul></div>
+<div class="os9-qs-w rv2"><ul class="cbar" role="list"><li><a class="cbar-i" href="tel:+66969966249"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span><small>Phone</small></span><span class="cbar-val">096 996 6249</span><span class="cbar-act"><b>Call us</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="mailto:contact@locarb.green"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><small>Email</small></span><span class="cbar-val">contact@locarb.green</span><span class="cbar-act"><b>Send an email</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="https://www.google.com/maps/search/?api=1&amp;query=LO-CARB+Rooftop+Soi+Sala+Daeng+1+Silom+Bang+Rak+Bangkok+10500" target="_blank" rel="noopener"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><small>Location</small></span><span class="cbar-addr"><span>1/3-7, Rooftop, Soi Saladaeng 1 (Godche)</span><span>Silom, Bang Rak, Bangkok 10500</span></span><span class="cbar-act"><b>View on map</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></a></li></ul></div>
 </div>
 </section>
 
@@ -772,13 +811,13 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
 <a class="btn btn-p pf-cta" href="Portfolio-Detail.dc.html#uce" onClick="{{openCase_uce}}"><span class="bl"><span>อ่⁠า⁠น​ก⁠ร⁠ณี⁠ศึ⁠ก⁠ษ⁠า</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
 </article><ul class="pf-soon-list" role="list"><li class="pf-soon"><span class="pf-mono" aria-hidden="true">TAT</span><span class="pf-soon-b"><b>ก⁠า⁠ร​ท่⁠อ⁠ง⁠เ⁠ที่⁠ย⁠ว​แ⁠ห่⁠ง​ป⁠ร⁠ะ⁠เ⁠ท⁠ศ⁠ไ⁠ท⁠ย (ท⁠ท⁠ท.)</b><small>กำ⁠ลั⁠ง​จั⁠ด​ทำ​ก⁠ร⁠ณี⁠ศึ⁠ก⁠ษ⁠า</small></span></li><li class="pf-soon"><span class="pf-mono" aria-hidden="true">TPC</span><span class="pf-soon-b"><b>ไ⁠ท⁠ย​แ⁠ล⁠น⁠ด์ พ⁠ริ​วิ​เ⁠ล⁠จ ค⁠า⁠ร์⁠ด (TPC)</b><small>กำ⁠ลั⁠ง​จั⁠ด​ทำ​ก⁠ร⁠ณี⁠ศึ⁠ก⁠ษ⁠า</small></span></li><li class="pf-soon"><span class="pf-mono" aria-hidden="true">RAOT</span><span class="pf-soon-b"><b>ก⁠า⁠ร​ย⁠า⁠ง​แ⁠ห่⁠ง​ป⁠ร⁠ะ⁠เ⁠ท⁠ศ⁠ไ⁠ท⁠ย (ก⁠ย⁠ท.)</b><small>กำ⁠ลั⁠ง​จั⁠ด​ทำ​ก⁠ร⁠ณี⁠ศึ⁠ก⁠ษ⁠า</small></span></li></ul></div></section>
 <section class="psec pf-hub pf-hub-art"><div class="wrap"><div class="pf-head rv"><div><p class="label"><span class="ln"></span>บ⁠ท⁠ค⁠ว⁠า⁠ม​แ⁠ล⁠ะ​ข่⁠า⁠ว⁠ส⁠า⁠ร</p><h2 class="display h2">บ⁠ท⁠ค⁠ว⁠า⁠ม <span class="it" style="color:var(--forest)">ล่⁠า⁠สุ⁠ด</span></h2><p class="pf-lead">บ⁠ท⁠ค⁠ว⁠า⁠ม​อ⁠ธิ⁠บ⁠า⁠ย IFRS, ISSB แ⁠ล⁠ะ​ค⁠า⁠ร์⁠บ⁠อ⁠น พ⁠ร้⁠อ⁠ม​ข่⁠า⁠ว⁠ส⁠า⁠ร​แ⁠ล⁠ะ​กิ⁠จ⁠ก⁠ร⁠ร⁠ม​จ⁠า⁠ก​ที⁠ม​โ⁠ล-ค⁠า⁠ร์⁠บ</p></div><a class="tlink pf-all" href="Blog-Articles.dc.html">ดู​บ⁠ท⁠ค⁠ว⁠า⁠ม​ทั้⁠ง⁠ห⁠ม⁠ด <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
-<div class="bh-body pf-artgrid"><sc-if value="{{hasHub}}" hint-placeholder-val="{{ true }}"><div class="bh-grid"><sc-for list="{{hubPosts}}" as="p" hint-placeholder-count="4"><a href="{{p.h}}" class="bh-card" target="{{p.tgt}}" rel="{{p.rel}}" onClick="{{p.open}}"><span class="bh-img"><img src="{{p.img}}" alt="" loading="lazy"></span><span class="bh-meta"><span class="bh-cat">{{p.catLabel}}</span><i class="bh-dot" aria-hidden="true"></i><span>{{p.tag}}</span></span><span class="bh-t">{{p.t}}</span><span class="bh-d">{{p.d}}<span class="bh-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></span></a></sc-for></div></sc-if></div></div></section>
+<div class="bh-body pf-artgrid"><sc-if value="{{hasHub}}" hint-placeholder-val="{{ true }}"><div class="bh-grid"><sc-for list="{{hubPosts}}" as="p" hint-placeholder-count="4"><article class="bx3-card"><div class="bx3-img"><img src="{{p.img}}" alt="" loading="lazy"><span class="bx3-cat">{{p.catLabel}} · {{p.tag}}</span></div><div class="bx3-b"><p class="bx3-date">{{p.d}}</p><h3 class="bx3-t"><a href="{{p.h}}" onClick="{{p.open}}">{{p.t}}</a></h3><p class="bx3-x">{{p.x}}</p><span class="bx3-more" aria-hidden="true">อ่⁠า⁠น​ต่⁠อ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></div></article></sc-for></div></sc-if></div></div></section>
 <section class="os9-cta"><svg class="os9-curve" viewBox="0 0 1440 116" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V44C1080 120 360 120 0 44Z" fill="#FFFFFF"></path></svg>
 <div class="os9-cbg" aria-hidden="true"><img src="assets/76a10b9728d986483bbe8ab87e4dd874.webp" alt="" loading="lazy"></div><div class="os9-cov" aria-hidden="true"></div>
 <div class="wrap os9-cg">
 <div class="rv"><h2 class="os9-ch">คุ⁠ย​กั⁠บ​เ⁠ร⁠า​เ⁠รื่⁠อ⁠ง​โ⁠ป⁠ร⁠เ⁠จ⁠ก⁠ต์ <span class="it" >แ⁠บ⁠บ​นี้</span></h2><p class="os9-cp">บ⁠อ⁠ก​เ⁠ป้⁠า⁠ห⁠ม⁠า⁠ย​ข⁠อ⁠ง​คุ⁠ณ แ⁠ล้⁠ว​เ⁠ร⁠า​จ⁠ะ​แ⁠น⁠ะ⁠นำ​โ⁠ซ⁠ลู⁠ชั⁠น​ที่​เ⁠ห⁠ม⁠า⁠ะ​ส⁠ม</p>
 <div class="os9-cb"><a href="Contact.dc.html" class="btn btn-p"><span class="bl"><span>ติ⁠ด⁠ต่⁠อ​เ⁠ร⁠า</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="Main.dc.html" class="btn btn-od"><span class="bl"><span>ดู​โ⁠ซ⁠ลู⁠ชั⁠น​ทั้⁠ง⁠ห⁠ม⁠ด</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div>
-<div class="os9-qs-w rv2"><ul class="cbar" role="list"><li><a class="cbar-i" href="tel:+66969966249"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span><small>โ⁠ท⁠ร⁠ศั⁠พ⁠ท์</small></span><b class="cbar-val">096 996 6249</b><span class="cbar-act"><b>โ⁠ท⁠ร​ห⁠า​เ⁠ร⁠า</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="mailto:contact@locarb.green"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><small>อี⁠เ⁠ม⁠ล</small></span><b class="cbar-val">contact@locarb.green</b><span class="cbar-act"><b>ส่⁠ง​อี⁠เ⁠ม⁠ล</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="https://www.google.com/maps/search/?api=1&amp;query=LO-CARB+Rooftop+Soi+Sala+Daeng+1+Silom+Bang+Rak+Bangkok+10500" target="_blank" rel="noopener"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><small>ที่​ตั้⁠ง</small></span><span class="cbar-addr"><span>เ⁠ล⁠ข​ที่ 1/3-7 ชั้⁠น​ด⁠า⁠ด⁠ฟ้⁠า ซ⁠อ⁠ย​ศ⁠า⁠ล⁠า⁠แ⁠ด⁠ง 1 (Godche)</span><span>แ⁠ข⁠ว⁠ง​สี⁠ล⁠ม เ⁠ข⁠ต​บ⁠า⁠ง⁠รั⁠ก ก⁠รุ⁠ง⁠เ⁠ท⁠พ⁠ม⁠ห⁠า⁠น⁠ค⁠ร 10500</span></span><span class="cbar-act"><b>ดู​แ⁠ผ⁠น⁠ที่</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></a></li></ul></div>
+<div class="os9-qs-w rv2"><ul class="cbar" role="list"><li><a class="cbar-i" href="tel:+66969966249"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span><small>โ⁠ท⁠ร⁠ศั⁠พ⁠ท์</small></span><span class="cbar-val">096 996 6249</span><span class="cbar-act"><b>โ⁠ท⁠ร​ห⁠า​เ⁠ร⁠า</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="mailto:contact@locarb.green"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><small>อี⁠เ⁠ม⁠ล</small></span><span class="cbar-val">contact@locarb.green</span><span class="cbar-act"><b>ส่⁠ง​อี⁠เ⁠ม⁠ล</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></li><li><a class="cbar-i" href="https://www.google.com/maps/search/?api=1&amp;query=LO-CARB+Rooftop+Soi+Sala+Daeng+1+Silom+Bang+Rak+Bangkok+10500" target="_blank" rel="noopener"><span class="cbar-top"><span class="cbar-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><small>ที่​ตั้⁠ง</small></span><span class="cbar-addr"><span>เ⁠ล⁠ข​ที่ 1/3-7 ชั้⁠น​ด⁠า⁠ด⁠ฟ้⁠า ซ⁠อ⁠ย​ศ⁠า⁠ล⁠า⁠แ⁠ด⁠ง 1 (Godche)</span><span>แ⁠ข⁠ว⁠ง​สี⁠ล⁠ม เ⁠ข⁠ต​บ⁠า⁠ง⁠รั⁠ก ก⁠รุ⁠ง⁠เ⁠ท⁠พ⁠ม⁠ห⁠า⁠น⁠ค⁠ร 10500</span></span><span class="cbar-act"><b>ดู​แ⁠ผ⁠น⁠ที่</b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></a></li></ul></div>
 </div>
 </section>
 
@@ -815,6 +854,20 @@ class Component extends DCLogic {
   // SCALE-START
   saveScale(v) { try { localStorage.setItem('locarb-scale', String(v)); } catch (e) {} this.setState({ scale: v }); }
   // SCALE-END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -990,7 +1043,9 @@ class Component extends DCLogic {
     const FILES = ['Blog.html', 'Blog-Portfolio.html', 'Blog-Knowledge.html', 'Blog-News.html'];
     const CL = { 'Portfolio': 'Client story', 'Knowledge base': 'Knowledge base', 'News & events': 'News & events' };
     const ci = st.ci, cc = CATS[ci][1];
-    const deco = (p) => Object.assign({}, p, { catLabel: CL[p.cat] || p.cat, tgt: p.ext ? '_blank' : '', rel: p.ext ? 'noopener' : '', open: () => { try { if (p.pid) localStorage.setItem('locarb-post', p.pid); } catch (e) {} } });
+    const EXC = {"a01": ["LO-CARB welcomed partners and guests to share its sustainability work and plans.", "LO-⁠CARB ต้⁠อ⁠น⁠รั⁠บ​พั⁠น⁠ธ⁠มิ⁠ต⁠ร​แ⁠ล⁠ะ​แ⁠ข⁠ก⁠รั⁠บ⁠เ⁠ชิ⁠ญ เ⁠พื่⁠อ​แ⁠บ่⁠ง​ปั⁠น⁠ผ⁠ล⁠ง⁠า⁠น​แ⁠ล⁠ะ​แ⁠ผ⁠น⁠ง⁠า⁠น​ด้⁠า⁠น​ค⁠ว⁠า⁠ม⁠ยั่⁠ง⁠ยื⁠น"], "a03": ["What listed companies need to prepare for climate-related disclosures under IFRS S2, explained in plain language.", "ส⁠รุ⁠ป​สิ่⁠ง​ที่​บ⁠ริ⁠ษั⁠ท⁠จ⁠ด⁠ท⁠ะ⁠เ⁠บี⁠ย⁠น​ต้⁠อ⁠ง⁠เ⁠ต⁠รี⁠ย⁠ม​สำ⁠ห⁠รั⁠บ​ก⁠า⁠ร​เ⁠ปิ⁠ด⁠เ⁠ผ⁠ย⁠ข้⁠อ⁠มู⁠ล​ด้⁠า⁠น​ส⁠ภ⁠า⁠พ⁠ภู⁠มิ⁠อ⁠า⁠ก⁠า⁠ศ​ต⁠า⁠ม IFRS S2 แ⁠บ⁠บ​เ⁠ข้⁠า⁠ใ⁠จ⁠ง่⁠า⁠ย"], "a04": ["A look back at the moments and conversations from LO-CARB’s partner event.", "ย้⁠อ⁠น​ช⁠ม​บ⁠ร⁠ร⁠ย⁠า⁠ก⁠า⁠ศ​แ⁠ล⁠ะ​บ⁠ท⁠ส⁠น⁠ท⁠น⁠า​จ⁠า⁠ก​ง⁠า⁠น​พ⁠บ⁠ป⁠ะ​พั⁠น⁠ธ⁠มิ⁠ต⁠ร​ข⁠อ⁠ง LO-⁠CARB"], "a05": ["How a national food producer measured Scope 1, 2 and 3 emissions in one place with CarbonCal.", "ผู้⁠ผ⁠ลิ⁠ต​อ⁠า⁠ห⁠า⁠ร​ร⁠า⁠ย​ใ⁠ห⁠ญ่​วั⁠ด​ก⁠า⁠ร⁠ป⁠ล่⁠อ⁠ย​ก๊⁠า⁠ซ⁠เ⁠รื⁠อ⁠น⁠ก⁠ร⁠ะ⁠จ⁠ก Scope 1, 2 แ⁠ล⁠ะ 3 ไ⁠ด้​ใ⁠น​ที่​เ⁠ดี⁠ย⁠ว​ด้⁠ว⁠ย CarbonCal อ⁠ย่⁠า⁠ง⁠ไ⁠ร"], "a06": ["A side-by-side look at the general requirements of IFRS S1 and the climate disclosures in IFRS S2.", "เ⁠ป⁠รี⁠ย⁠บ​เ⁠ที⁠ย⁠บ​ข้⁠อ⁠กำ⁠ห⁠น⁠ด​ทั่⁠ว⁠ไ⁠ป​ข⁠อ⁠ง IFRS S1 กั⁠บ​ก⁠า⁠ร​เ⁠ปิ⁠ด⁠เ⁠ผ⁠ย⁠ข้⁠อ⁠มู⁠ล​ด้⁠า⁠น​ส⁠ภ⁠า⁠พ⁠ภู⁠มิ⁠อ⁠า⁠ก⁠า⁠ศ​ต⁠า⁠ม IFRS S2"], "a07": ["Details of the ISSB for Boards workshop, returning to Bangkok on 21 November.", "ร⁠า⁠ย​ล⁠ะ​เ⁠อี⁠ย⁠ด​เ⁠วิ⁠ร์⁠ก⁠ช็⁠อ⁠ป ISSB สำ⁠ห⁠รั⁠บ​ก⁠ร⁠ร⁠ม⁠ก⁠า⁠ร ที่​ก⁠ลั⁠บ​ม⁠า​จั⁠ด​ที่​ก⁠รุ⁠ง⁠เ⁠ท⁠พ⁠ฯ วั⁠น​ที่ 21 พ.ย."], "a09": ["What counts as Scope 1, 2 and 3 emissions, and why the difference matters.", "ก⁠า⁠ร⁠ป⁠ล่⁠อ⁠ย Scope 1, 2 แ⁠ล⁠ะ 3 คื⁠อ​อ⁠ะ⁠ไ⁠ร แ⁠ล⁠ะ​ทำ⁠ไ⁠ม​ก⁠า⁠ร​แ⁠ย⁠ก​ป⁠ร⁠ะ⁠เ⁠ภ⁠ท​จึ⁠ง​สำ⁠คั⁠ญ"], "a11": ["LO-CARB and a farming cooperative begin working together on carbon in agricultural land.", "LO-⁠CARB ร่⁠ว⁠ม​มื⁠อ​กั⁠บ​ส⁠ห⁠ก⁠ร⁠ณ์​ก⁠า⁠ร⁠เ⁠ก⁠ษ⁠ต⁠ร ใ⁠น​ง⁠า⁠น​ด้⁠า⁠น​ค⁠า⁠ร์⁠บ⁠อ⁠น​ใ⁠น​พื้⁠น⁠ที่​เ⁠ก⁠ษ⁠ต⁠ร"], "a12": ["Practical first steps for gathering Scope 3 data from your suppliers.", "ขั้⁠น​ต⁠อ⁠น​เ⁠ริ่⁠ม​ต้⁠น​ใ⁠น​ก⁠า⁠ร​เ⁠ก็⁠บ⁠ข้⁠อ⁠มู⁠ล Scope 3 จ⁠า⁠ก​ซั⁠พ⁠พ⁠ล⁠า⁠ย​เ⁠อ​อ⁠ร์"], "a14": ["CarbonCal now includes templates for Scope 3 categories.", "CarbonCal เ⁠พิ่⁠ม​เ⁠ท⁠ม⁠เ⁠พ⁠ล⁠ต​สำ⁠ห⁠รั⁠บ​ห⁠ม⁠ว⁠ด Scope 3"]};
+    const _thx = (() => { let l = this.state.lang; if (!l) { try { l = localStorage.getItem('locarb-lang') || 'th'; } catch (e) { l = 'th'; } } return l === 'th'; })();
+    const deco = (p) => Object.assign({}, p, { x: EXC[p.pid] ? EXC[p.pid][_thx ? 1 : 0] : '', catLabel: CL[p.cat] || p.cat, tgt: p.ext ? '_blank' : '', rel: p.ext ? 'noopener' : '', open: () => { try { if (p.pid) localStorage.setItem('locarb-post', p.pid); } catch (e) {} } });
     const list = P.filter((p) => (!cc || p.cat === cc) && (st.tag === 'All' || p.tag === st.tag)).map(deco);
     const ft = null, rest = list, shown = rest.slice(0, st.limit), flip = !!this._flip;
     const go = (patch) => { this._flip = !this._flip; this.setState(Object.assign({ limit: 8, solOpen: false }, patch)); };

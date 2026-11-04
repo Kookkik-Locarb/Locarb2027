@@ -2300,6 +2300,34 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 .lc footer a.f3-on{color:var(--forest)!important;font-weight:600;position:relative}
 .lc footer a.f3-on::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#0EA552;margin-right:8px;vertical-align:middle;transform:translateY(-1px)}
 /* NAVCUR-END */
+/* FX2-START */
+/* ===== English running text in STIX Two Text (headings stay Termina; Thai stays Anakotmai) ===== */
+html body .lc{font-family:"STIX Two Text","Anakotmai",serif}
+html body .lc .th-root{font-family:"Termina Text","Anakotmai",sans-serif}
+:where(.lc) :where(button,input,select,textarea,label,nav,header,footer .f2-bot,.btn,.chip,.label,small,time,.crumbs,.bh-meta,[class*="-tag"],[class*="-cat"],[class*="-meta"],[class*="-date"]){font-family:"Termina Text","Anakotmai",sans-serif}
+:where(.lc) :where(input,textarea)::placeholder{font-family:"Termina Text","Anakotmai",sans-serif}
+/* ===== Breathing room before the footer on inner pages ===== */
+html body .lc section:is(.sc-ct,.os9-cta,.ct7-mapband){padding-bottom:128px!important}
+@media (max-width:680px){html body .lc section:is(.sc-ct,.os9-cta,.ct7-mapband){padding-bottom:88px!important}}
+html body .lc :is(.ifx2-sub,.r2-state,[class*="mapcard"] small):not(.th-root *){font-family:"STIX Two Text",serif!important;font-weight:400!important;letter-spacing:0;text-transform:none}
+html body .lc .th-root :is(.ifx2-sub,.r2-state,[class*="mapcard"] small){font-family:"Anakotmai",sans-serif!important}
+/* Home hero: no underline on the highlighted phrase */
+html body .lc .hx-mark{background:none!important;background-image:none!important;text-decoration:none!important;border-bottom:0!important;box-shadow:none!important}
+html body .lc .hx-mark::before,html body .lc .hx-mark::after{content:none!important;display:none!important}
+/* language codes TH / EN in the navbar and footer: Termina */
+html body .lc :is(.nu-btn b,.nu-btn b *,.nu-code,.nu-code *,.f2-lang button,.f2-lang a,.f2-lang *,.mn-seg button,.mn-seg button *){font-family:"Termina",sans-serif!important;font-weight:700!important;letter-spacing:.04em}
+html body .lc .th-root.th-root.th-root :is(.nu-btn b,.nu-btn b *,.nu-code,.nu-code *,.f2-lang button,.f2-lang a,.f2-lang *,.mn-seg button,.mn-seg button *):not(svg):not(svg *){font-family:"Termina",sans-serif!important;font-weight:700!important;letter-spacing:.04em!important}
+/* ===== Thai: room for stacked vowels & tone marks (nothing clipped) ===== */
+html body .lc .th-root .bl{height:auto!important;overflow:visible!important;line-height:1.6!important;padding:0!important;margin:0!important}
+html body .lc .th-root .bl > span{line-height:inherit!important;padding:0!important;margin:0!important}
+html body .lc .th-root.th-root.th-root.th-root :is(h1,h2,h3,h4,.display,.mintro strong){line-height:1.42!important;padding-block:.04em}
+html body .lc .th-root :is(h1,h2,h3,h4) :is(.it,span){line-height:inherit}
+html body .lc .th-root .it{padding-block:.12em;margin-block:-.12em}
+html body .lc .th-root :is(.crumbs,.nd-crumbs) :is(a,b,span){line-height:1.6!important}
+html body .lc .th-root :is(.cs-np b,.lg4-mark,[class*="fig"],[class*="-num"] b,[class*="-n"] b){line-height:1.35!important}
+html body .lc .th-root :is(.cl3-ct small,.cl3-ct b,.bx3-x){line-height:1.6!important;padding-bottom:.08em}
+html body .lc .th-root .bx3-x{padding-bottom:0}
+/* FX2-END */
 /* MOB3-START */
 /* ===== Mobile v3 (≤680px): seamless glow, soft curves, 2-up buttons, centred copy ===== */
 @media (max-width:680px){
@@ -2503,7 +2531,6 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <!-- 1b · WHAT WE DO — one-sentence statement (Content Template order) -->
 <section class="wwd" aria-labelledby="wwd-h">
 <div class="wrap wwd-in rv">
-<p class="label" style="justify-content:center"><span class="ln"></span>What we do<span class="ln"></span></p>
 <h2 class="wwd-t" id="wwd-h">At LO-⁠CARB we provide one stop service in all sustainability dimension from climate defense, reporting, capacity building to business solutions.</h2>
 <ul class="wwd-chips" role="list"><li><a href="Solution-IFRS.dc.html">Climate defense <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></li><li><a href="Solution-Reporting.dc.html">Reporting <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></li><li><a href="Solution-ISSB.dc.html">Capacity building <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></li><li><a href="Solution-CarbonCal.dc.html">Business solutions <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></li></ul>
 </div>
@@ -2514,7 +2541,6 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <div class="ab5-glow" aria-hidden="true"><span class="ab5-orb o1"></span><span class="ab5-orb o2"></span><span class="ab5-orb o3"></span></div>
 <div class="wrap ab5-grid">
 <div class="ab5-copy rv">
-<p class="label"><span class="ln"></span>About LO-⁠CARB</p>
 <h2 class="display h2" id="about-h" style="font-size:calc(clamp(26px,2.5vw,40px)*var(--s));max-width:16ch">One team for sustainability advice, business strategy and <span class="it" style="color:var(--forest)">carbon software</span>.</h2>
 <p class="ab5-lead">Founded in 2021, LO-⁠CARB is a sustainability consultancy that sees sustainability as the heart of business, not a trend or CSR. We combine science, technology and business to help Thai organizations cut emissions, meet global standards and grow.</p>
 <ul class="ab5-pillars" role="list"><li><span class="ab5-pi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"></path><path d="M5 19l7-7"></path></svg></span>Sustainability</li><li><span class="ab5-pi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><circle cx="12" cy="12" r="4.5"></circle><circle cx="12" cy="12" r="1" fill="currentColor"></circle></svg></span>Strategy</li><li><span class="ab5-pi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"></rect><path d="M9.5 9.5h5v5h-5zM9 2.5V6M15 2.5V6M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"></path></svg></span>Technology</li></ul>
@@ -2533,12 +2559,12 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <section class="cl3 lg4" aria-labelledby="tb2-h">
 <div class="wrap">
 <div class="lg4-head rv">
-<div><p class="label"><span class="ln"></span>Our clients</p><h2 class="display h2" id="tb2-h" style="font-size:calc(clamp(26px,2.4vw,38px)*var(--s));max-width:22ch">Clients across Thailand’s <span class="it" style="color:var(--forest)">public and private</span> sectors</h2></div>
+<div><h2 class="display h2" id="tb2-h" style="font-size:calc(clamp(26px,2.4vw,38px)*var(--s));max-width:22ch">Clients across Thailand’s <span class="it" style="color:var(--forest)">public and private</span> sectors</h2></div>
 <div class="lg4-side"><p class="lg4-f"><b>14</b><span>organisations</span></p><p class="lg4-f"><b>5</b><span>sectors</span></p><a href="Blog-Portfolio.dc.html" class="cl3-link">See client stories <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></div>
 </div>
 <ul class="lg4-wall rv" role="list"><li class="lg4-c" tabindex="0" aria-label="Industrial Estate Authority of Thailand"><span class="lg4-mark">IEAT</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>Industrial Estate Authority of Thailand</b><small>Public sector</small></span></li><li class="lg4-c" tabindex="0" aria-label="Rubber Authority of Thailand"><span class="lg4-mark">RAOT</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>Rubber Authority of Thailand</b><small>Public sector</small></span></li><li class="lg4-c" tabindex="0" aria-label="Digital Economy Promotion Agency"><span class="lg4-mark">depa</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>Digital Economy Promotion Agency</b><small>Public sector</small></span></li><li class="lg4-c" tabindex="0" aria-label="Tourism Authority of Thailand"><span class="lg4-mark">TAT</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>Tourism Authority of Thailand</b><small>Public sector</small></span></li><li class="lg4-c" tabindex="0" aria-label="National Power Supply PCL"><span class="lg4-mark">NPS</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>National Power Supply PCL</b><small>Energy</small></span></li><li class="lg4-c" tabindex="0" aria-label="Electricity Generating Authority of Thailand"><span class="lg4-mark">EGAT</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>Electricity Generating Authority of Thailand</b><small>Energy</small></span></li><li class="lg4-c" tabindex="0" aria-label="304 Industrial Park"><span class="lg4-mark">304 IP</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>304 Industrial Park</b><small>Industrial &amp; manufacturing</small></span></li><li class="lg4-c" tabindex="0" aria-label="Union Chemical and Equipment Co., Ltd."><span class="lg4-mark">UC&amp;E</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>Union Chemical and Equipment Co., Ltd.</b><small>Industrial &amp; manufacturing</small></span></li><li class="lg4-c" tabindex="0" aria-label="Petchsrivichai Enterprise PCL"><span class="lg4-mark">PCE</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>Petchsrivichai Enterprise PCL</b><small>Industrial &amp; manufacturing</small></span></li><li class="lg4-c" tabindex="0" aria-label="Airports of Thailand PCL"><span class="lg4-mark">AOT</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>Airports of Thailand PCL</b><small>Services</small></span></li><li class="lg4-c" tabindex="0" aria-label="Thailand Privilege Card Co., Ltd."><span class="lg4-mark">TPC</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>Thailand Privilege Card Co., Ltd.</b><small>Services</small></span></li><li class="lg4-c" tabindex="0" aria-label="SME Development Bank"><span class="lg4-mark">SME D Bank</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>SME Development Bank</b><small>Financial</small></span></li><li class="lg4-c" tabindex="0" aria-label="Bank for Agriculture and Agricultural Cooperatives"><span class="lg4-mark">BAAC</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>Bank for Agriculture and Agricultural Cooperatives</b><small>Financial</small></span></li><li class="lg4-c" tabindex="0" aria-label="SCBX PCL"><span class="lg4-mark">SCBX</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>SCBX PCL</b><small>Financial</small></span></li></ul>
 <div class="cl3-certs lg4-certs rv">
-<div class="cl3-certh"><p class="label" style="margin:0"><span class="ln"></span>Certificates</p><a href="About-Certificates.dc.html" class="cl3-link">View all <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></div>
+<div class="cl3-certh"><h2 class="display h2 cl3-ttl">Certificates</h2><a href="About-Certificates.dc.html" class="cl3-link">View all <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></div>
 <ul class="cl3-cl" role="list"><li><a href="About-Certificates.dc.html" class="cl3-cert"><span class="cl3-ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path><path d="M9.5 14l1.8 1.8 3.2-3.6"></path></svg></span><span class="cl3-ct"><b>ISO</b><small>Certified</small></span></a></li><li><a href="About-Certificates.dc.html" class="cl3-cert"><span class="cl3-ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"></path><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"></path></svg></span><span class="cl3-ct"><b>ISSB Training Partner</b><small>Thailand's 1st</small></span></a></li><li><a href="About-Certificates.dc.html" class="cl3-cert"><span class="cl3-ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path><path d="M9.5 14l1.8 1.8 3.2-3.6"></path></svg></span><span class="cl3-ct"><b>CFO</b><small>Carbon Footprint for Organization</small></span></a></li><li><a href="About-Certificates.dc.html" class="cl3-cert"><span class="cl3-ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path><path d="M9.5 14l1.8 1.8 3.2-3.6"></path></svg></span><span class="cl3-ct"><b>BSI (CBAM)</b><small>CBAM certificate</small></span></a></li></ul>
 </div>
 </div>
@@ -2566,7 +2592,6 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <section class="solutions sx" id="solutions" aria-labelledby="sol-h">
 <div class="wrap">
 <div class="sx-head rv">
-<p class="label" style="justify-content:center"><span class="ln"></span>Our solutions<span class="ln"></span></p>
 <h2 class="display h2" id="sol-h" style="font-size:calc(clamp(28px,2.6vw,40px)*var(--s));max-width:24ch">IFRS, carbon accounting and ESG <span class="it" style="color:var(--forest)">solutions</span> for Thai companies</h2>
 </div>
 <ol class="sx-row" role="list">
@@ -2613,7 +2638,7 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <section class="blog bx bx2 bx3" id="blog" aria-labelledby="blog-h">
 <div class="wrap">
 <div class="bx3-head rv">
-<div><p class="label"><span class="ln"></span>Insights &amp; client stories</p><h2 class="display h2" id="blog-h">Insights on IFRS, ISSB and carbon <span class="it" style="color:var(--forest)">accounting</span></h2></div>
+<div><h2 class="display h2" id="blog-h">Insights on IFRS, ISSB and carbon <span class="it" style="color:var(--forest)">accounting</span></h2></div>
 <a href="Blog.dc.html" class="btn btn-od"><span class="bl"><span>All posts</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 <div class="bx3-row">
@@ -2657,7 +2682,6 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <div class="ov" aria-hidden="true"></div>
 <div class="wrap ctagrid">
 <div class="rv">
-<p class="label"><span class="ln"></span>Get in touch</p>
 <h2 class="display h2" style="font-size:calc(clamp(36px,4.4vw,68px)*var(--s));max-width:16ch">Ready to put your organization <span class="it" style="color:var(--forest)">on a carbon diet?</span></h2>
 <p class="lead" style="margin-top:24px;color:var(--muted);font-size:calc(18px*var(--s))">Tell us about your IFRS S1 &amp; S2, carbon accounting or ESG reporting needs. Our consultants will contact you to discuss the right approach for your organization.</p>
 </div>
@@ -2832,7 +2856,6 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <!-- 1b · WHAT WE DO — one-sentence statement (Content Template order) -->
 <section class="wwd" aria-labelledby="wwd-h">
 <div class="wrap wwd-in rv">
-<p class="label" style="justify-content:center"><span class="ln"></span>เ⁠ร⁠า​ทำ​อ⁠ะ⁠ไ⁠ร<span class="ln"></span></p>
 <h2 class="wwd-t" id="wwd-h">โ⁠ล-ค⁠า⁠ร์⁠บ​ใ⁠ห้​บ⁠ริ⁠ก⁠า⁠ร​แ⁠บ⁠บ​ค⁠ร⁠บ⁠ว⁠ง⁠จ⁠ร<br>ใ⁠น​ทุ⁠ก​มิ⁠ติ​ข⁠อ⁠ง​ค⁠ว⁠า⁠ม⁠ยั่⁠ง⁠ยื⁠น<br>ตั้⁠ง⁠แ⁠ต่​ก⁠า⁠ร​รั⁠บ⁠มื⁠อ​ก⁠า⁠ร⁠เ⁠ป⁠ลี่⁠ย⁠น⁠แ⁠ป⁠ล⁠ง​ส⁠ภ⁠า⁠พ⁠ภู⁠มิ⁠อ⁠า⁠ก⁠า⁠ศ<br>ก⁠า⁠ร​ทำ​ร⁠า⁠ย⁠ง⁠า⁠น ส⁠ร้⁠า⁠ง​ที⁠ม จ⁠น⁠ถึ⁠ง​โ⁠ซ⁠ลู⁠ชั⁠น​ท⁠า⁠ง⁠ธุ⁠ร⁠กิ⁠จ</h2>
 <ul class="wwd-chips" role="list"><li><a href="Solution-IFRS.dc.html">รั⁠บ⁠มื⁠อ​ก⁠า⁠ร⁠เ⁠ป⁠ลี่⁠ย⁠น⁠แ⁠ป⁠ล⁠ง​ส⁠ภ⁠า⁠พ⁠ภู⁠มิ⁠อ⁠า⁠ก⁠า⁠ศ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></li><li><a href="Solution-Reporting.dc.html">ก⁠า⁠ร​ร⁠า⁠ย⁠ง⁠า⁠น <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></li><li><a href="Solution-ISSB.dc.html">ส⁠ร้⁠า⁠ง​ที⁠ม <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></li><li><a href="Solution-CarbonCal.dc.html">โ⁠ซ⁠ลู⁠ชั⁠น​ท⁠า⁠ง⁠ธุ⁠ร⁠กิ⁠จ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></li></ul>
 </div>
@@ -2843,7 +2866,6 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <div class="ab5-glow" aria-hidden="true"><span class="ab5-orb o1"></span><span class="ab5-orb o2"></span><span class="ab5-orb o3"></span></div>
 <div class="wrap ab5-grid">
 <div class="ab5-copy rv">
-<p class="label"><span class="ln"></span>เ⁠กี่⁠ย⁠ว​กั⁠บ LO-⁠CARB</p>
 <h2 class="display h2" id="about-h" style="font-size:calc(clamp(26px,2.5vw,40px)*var(--s));max-width:16ch">ที⁠ม​เ⁠ดี⁠ย⁠ว​ที่​ดู⁠แ⁠ล​ทั้⁠ง​ง⁠า⁠น​ที่⁠ป⁠รึ⁠ก⁠ษ⁠า​ด้⁠า⁠น​ค⁠ว⁠า⁠ม⁠ยั่⁠ง⁠ยื⁠น ก⁠ล⁠ยุ⁠ท⁠ธ์​ธุ⁠ร⁠กิ⁠จ แ⁠ล⁠ะ <span class="it" style="color:var(--forest)">ซ⁠อ⁠ฟ⁠ต์⁠แ⁠ว⁠ร์​ค⁠า⁠ร์⁠บ⁠อ⁠น</span></h2>
 <p class="ab5-lead">โ⁠ล-ค⁠า⁠ร์​บ⁠ก่⁠อ​ตั้⁠ง​ใ⁠น​ปี 2564 เ⁠ป็⁠น​บ⁠ริ⁠ษั⁠ท​ที่⁠ป⁠รึ⁠ก⁠ษ⁠า​ด้⁠า⁠น​ค⁠ว⁠า⁠ม⁠ยั่⁠ง⁠ยื⁠น​ที่​ม⁠อ⁠ง​ค⁠ว⁠า⁠ม⁠ยั่⁠ง⁠ยื⁠น​เ⁠ป็⁠น​หั⁠ว⁠ใ⁠จ​ข⁠อ⁠ง​ธุ⁠ร⁠กิ⁠จ ไ⁠ม่⁠ใ⁠ช่​แ⁠ค่​ก⁠ร⁠ะ⁠แ⁠ส​ห⁠รื⁠อ CSR เ⁠ร⁠า​ผ⁠ส⁠า⁠น​วิ⁠ท⁠ย⁠า⁠ศ⁠า⁠ส⁠ต⁠ร์ เ⁠ท⁠ค⁠โ⁠น⁠โ⁠ล⁠ยี แ⁠ล⁠ะ​ธุ⁠ร⁠กิ⁠จ เ⁠พื่⁠อ​ช่⁠ว⁠ย​อ⁠ง⁠ค์⁠ก⁠ร​ไ⁠ท⁠ย​ล⁠ด⁠ก⁠า⁠ร⁠ป⁠ล่⁠อ⁠ย​ก๊⁠า⁠ซ⁠เ⁠รื⁠อ⁠น⁠ก⁠ร⁠ะ⁠จ⁠ก ก้⁠า⁠ว​สู่​ม⁠า⁠ต⁠ร⁠ฐ⁠า⁠น​ส⁠า⁠ก⁠ล แ⁠ล⁠ะ​เ⁠ติ⁠บ⁠โ⁠ต​ไ⁠ป​พ⁠ร้⁠อ⁠ม​กั⁠น</p>
 <ul class="ab5-pillars" role="list"><li><span class="ab5-pi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"></path><path d="M5 19l7-7"></path></svg></span>ค⁠ว⁠า⁠ม⁠ยั่⁠ง⁠ยื⁠น</li><li><span class="ab5-pi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><circle cx="12" cy="12" r="4.5"></circle><circle cx="12" cy="12" r="1" fill="currentColor"></circle></svg></span>ก⁠ล⁠ยุ⁠ท⁠ธ์</li><li><span class="ab5-pi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"></rect><path d="M9.5 9.5h5v5h-5zM9 2.5V6M15 2.5V6M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"></path></svg></span>เ⁠ท⁠ค⁠โ⁠น⁠โ⁠ล⁠ยี</li></ul>
@@ -2862,12 +2884,12 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <section class="cl3 lg4" aria-labelledby="tb2-h">
 <div class="wrap">
 <div class="lg4-head rv">
-<div><p class="label"><span class="ln"></span>ลู⁠ก⁠ค้⁠า​ข⁠อ⁠ง​เ⁠ร⁠า</p><h2 class="display h2" id="tb2-h" style="font-size:calc(clamp(26px,2.4vw,38px)*var(--s));max-width:22ch">ลู⁠ก⁠ค้⁠า​จ⁠า⁠ก <span class="it" style="color:var(--forest)">ภ⁠า⁠ค⁠รั⁠ฐ​แ⁠ล⁠ะ​เ⁠อ⁠ก⁠ช⁠น</span> ภ⁠า⁠ค⁠ธุ⁠ร⁠กิ⁠จ</h2></div>
+<div><h2 class="display h2" id="tb2-h" style="font-size:calc(clamp(26px,2.4vw,38px)*var(--s));max-width:22ch">ลู⁠ก⁠ค้⁠า​จ⁠า⁠ก <span class="it" style="color:var(--forest)">ภ⁠า⁠ค⁠รั⁠ฐ​แ⁠ล⁠ะ​เ⁠อ⁠ก⁠ช⁠น</span> ภ⁠า⁠ค⁠ธุ⁠ร⁠กิ⁠จ</h2></div>
 <div class="lg4-side"><p class="lg4-f"><b>14</b><span>อ⁠ง⁠ค์⁠ก⁠ร</span></p><p class="lg4-f"><b>5</b><span>ภ⁠า⁠ค⁠ธุ⁠ร⁠กิ⁠จ</span></p><a href="Blog-Portfolio.dc.html" class="cl3-link">ดู​เ⁠รื่⁠อ⁠ง​ร⁠า⁠ว​ลู⁠ก⁠ค้⁠า <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></div>
 </div>
 <ul class="lg4-wall rv" role="list"><li class="lg4-c" tabindex="0" aria-label="การนิคมอุตสาหกรรมแห่งประเทศไทย"><span class="lg4-mark">ก⁠น⁠อ.</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>ก⁠า⁠ร​นิ⁠ค⁠ม​อุ⁠ต⁠ส⁠า⁠ห⁠ก⁠ร⁠ร⁠ม​แ⁠ห่⁠ง​ป⁠ร⁠ะ⁠เ⁠ท⁠ศ⁠ไ⁠ท⁠ย</b><small>ภ⁠า⁠ค⁠รั⁠ฐ</small></span></li><li class="lg4-c" tabindex="0" aria-label="การยางแห่งประเทศไทย"><span class="lg4-mark">ก⁠ย⁠ท.</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>ก⁠า⁠ร​ย⁠า⁠ง​แ⁠ห่⁠ง​ป⁠ร⁠ะ⁠เ⁠ท⁠ศ⁠ไ⁠ท⁠ย</b><small>ภ⁠า⁠ค⁠รั⁠ฐ</small></span></li><li class="lg4-c" tabindex="0" aria-label="สำนักงานส่งเสริมเศรษฐกิจดิจิทัล"><span class="lg4-mark">ดี​ป้⁠า</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>สำ⁠นั⁠ก⁠ง⁠า⁠น​ส่⁠ง​เ⁠ส⁠ริ⁠ม​เ⁠ศ⁠ร⁠ษ⁠ฐ⁠กิ⁠จ​ดิ⁠จิ⁠ทั⁠ล</b><small>ภ⁠า⁠ค⁠รั⁠ฐ</small></span></li><li class="lg4-c" tabindex="0" aria-label="การท่องเที่ยวแห่งประเทศไทย"><span class="lg4-mark">ท⁠ท⁠ท.</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>ก⁠า⁠ร​ท่⁠อ⁠ง⁠เ⁠ที่⁠ย⁠ว​แ⁠ห่⁠ง​ป⁠ร⁠ะ⁠เ⁠ท⁠ศ⁠ไ⁠ท⁠ย</b><small>ภ⁠า⁠ค⁠รั⁠ฐ</small></span></li><li class="lg4-c" tabindex="0" aria-label="บริษัท เนชั่นแนล เพาเวอร์ ซัพพลาย จำกัด (มหาชน)"><span class="lg4-mark">NPS</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>บ⁠ริ⁠ษั⁠ท เ⁠น⁠ชั่⁠น⁠แ⁠น⁠ล เ⁠พ⁠า​เ⁠ว⁠อ⁠ร์ ซั⁠พ⁠พ⁠ล⁠า⁠ย จำ⁠กั⁠ด (ม⁠ห⁠า⁠ช⁠น)</b><small>ภ⁠า⁠ค​พ⁠ลั⁠ง⁠ง⁠า⁠น</small></span></li><li class="lg4-c" tabindex="0" aria-label="การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย"><span class="lg4-mark">ก⁠ฟ⁠ผ.</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>ก⁠า⁠ร​ไ⁠ฟ⁠ฟ้⁠า​ฝ่⁠า⁠ย​ผ⁠ลิ⁠ต​แ⁠ห่⁠ง​ป⁠ร⁠ะ⁠เ⁠ท⁠ศ⁠ไ⁠ท⁠ย</b><small>ภ⁠า⁠ค​พ⁠ลั⁠ง⁠ง⁠า⁠น</small></span></li><li class="lg4-c" tabindex="0" aria-label="สวนอุตสาหกรรม 304"><span class="lg4-mark">304 IP</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>ส⁠ว⁠น​อุ⁠ต⁠ส⁠า⁠ห⁠ก⁠ร⁠ร⁠ม 304</b><small>ภ⁠า⁠ค​อุ⁠ต⁠ส⁠า⁠ห⁠ก⁠ร⁠ร⁠ม​แ⁠ล⁠ะ​ก⁠า⁠ร​ผ⁠ลิ⁠ต</small></span></li><li class="lg4-c" tabindex="0" aria-label="บริษัท ยูเนี่ยน เคมีคอล แอนด์ อีควิปเม้นท์ จำกัด"><span class="lg4-mark">UC&amp;E</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>บ⁠ริ⁠ษั⁠ท ยู​เ⁠นี่⁠ย⁠น เ⁠ค⁠มี​ค⁠อ⁠ล แ⁠อ⁠น⁠ด์ อี⁠ค⁠วิ⁠ป⁠เ⁠ม้⁠น⁠ท์ จำ⁠กั⁠ด</b><small>ภ⁠า⁠ค​อุ⁠ต⁠ส⁠า⁠ห⁠ก⁠ร⁠ร⁠ม​แ⁠ล⁠ะ​ก⁠า⁠ร​ผ⁠ลิ⁠ต</small></span></li><li class="lg4-c" tabindex="0" aria-label="บริษัท เพชรศรีวิชัย เอ็นเตอร์ไพรส์ จำกัด (มหาชน)"><span class="lg4-mark">PCE</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>บ⁠ริ⁠ษั⁠ท เ⁠พ⁠ช⁠ร​ศ⁠รี​วิ⁠ชั⁠ย เ⁠อ็⁠น​เ⁠ต⁠อ⁠ร์​ไ⁠พ⁠ร⁠ส์ จำ⁠กั⁠ด (ม⁠ห⁠า⁠ช⁠น)</b><small>ภ⁠า⁠ค​อุ⁠ต⁠ส⁠า⁠ห⁠ก⁠ร⁠ร⁠ม​แ⁠ล⁠ะ​ก⁠า⁠ร​ผ⁠ลิ⁠ต</small></span></li><li class="lg4-c" tabindex="0" aria-label="บริษัท ท่าอากาศยานไทย จำกัด (มหาชน)"><span class="lg4-mark">ท⁠อ⁠ท.</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>บ⁠ริ⁠ษั⁠ท ท่⁠า​อ⁠า⁠ก⁠า⁠ศ⁠ย⁠า⁠น​ไ⁠ท⁠ย จำ⁠กั⁠ด (ม⁠ห⁠า⁠ช⁠น)</b><small>ภ⁠า⁠ค​บ⁠ริ⁠ก⁠า⁠ร</small></span></li><li class="lg4-c" tabindex="0" aria-label="บริษัท ไทยแลนด์ พริวิเลจ คาร์ด จำกัด"><span class="lg4-mark">TPC</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>บ⁠ริ⁠ษั⁠ท ไ⁠ท⁠ย​แ⁠ล⁠น⁠ด์ พ⁠ริ​วิ​เ⁠ล⁠จ ค⁠า⁠ร์⁠ด จำ⁠กั⁠ด</b><small>ภ⁠า⁠ค​บ⁠ริ⁠ก⁠า⁠ร</small></span></li><li class="lg4-c" tabindex="0" aria-label="ธนาคารพัฒนาวิสาหกิจขนาดกลางและขนาดย่อมแห่งประเทศไทย"><span class="lg4-mark">ธ⁠พ⁠ว.</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>ธ⁠น⁠า⁠ค⁠า⁠ร​พั⁠ฒ⁠น⁠า​วิ⁠ส⁠า⁠ห⁠กิ⁠จ​ข⁠น⁠า⁠ด​ก⁠ล⁠า⁠ง​แ⁠ล⁠ะ​ข⁠น⁠า⁠ด​ย่⁠อ⁠ม​แ⁠ห่⁠ง​ป⁠ร⁠ะ⁠เ⁠ท⁠ศ⁠ไ⁠ท⁠ย</b><small>ภ⁠า⁠ค​ก⁠า⁠ร⁠เ⁠งิ⁠น</small></span></li><li class="lg4-c" tabindex="0" aria-label="ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร"><span class="lg4-mark">ธ.ก.ส.</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>ธ⁠น⁠า⁠ค⁠า⁠ร​เ⁠พื่⁠อ​ก⁠า⁠ร⁠เ⁠ก⁠ษ⁠ต⁠ร​แ⁠ล⁠ะ​ส⁠ห⁠ก⁠ร⁠ณ์​ก⁠า⁠ร⁠เ⁠ก⁠ษ⁠ต⁠ร</b><small>ภ⁠า⁠ค​ก⁠า⁠ร⁠เ⁠งิ⁠น</small></span></li><li class="lg4-c" tabindex="0" aria-label="บริษัท เอสซีบีเอกซ์ จำกัด (มหาชน)"><span class="lg4-mark">SCBX</span><!-- logo: replace the span above with <img class="lg4-img" src="LOGO" alt=""> --><span class="lg4-tip" aria-hidden="true"><b>บ⁠ริ⁠ษั⁠ท เ⁠อ⁠ส​ซี​บี​เ⁠อ⁠ก​ซ์ จำ⁠กั⁠ด (ม⁠ห⁠า⁠ช⁠น)</b><small>ภ⁠า⁠ค​ก⁠า⁠ร⁠เ⁠งิ⁠น</small></span></li></ul>
 <div class="cl3-certs lg4-certs rv">
-<div class="cl3-certh"><p class="label" style="margin:0"><span class="ln"></span>ใ⁠บ⁠รั⁠บ⁠ร⁠อ⁠ง</p><a href="About-Certificates.dc.html" class="cl3-link">ดู​ทั้⁠ง⁠ห⁠ม⁠ด <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></div>
+<div class="cl3-certh"><h2 class="display h2 cl3-ttl">ใ⁠บ⁠รั⁠บ⁠ร⁠อ⁠ง</h2><a href="About-Certificates.dc.html" class="cl3-link">ดู​ทั้⁠ง⁠ห⁠ม⁠ด <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></div>
 <ul class="cl3-cl" role="list"><li><a href="About-Certificates.dc.html" class="cl3-cert"><span class="cl3-ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path><path d="M9.5 14l1.8 1.8 3.2-3.6"></path></svg></span><span class="cl3-ct"><b>ISO</b><small>ไ⁠ด้⁠รั⁠บ​ก⁠า⁠ร​รั⁠บ⁠ร⁠อ⁠ง</small></span></a></li><li><a href="About-Certificates.dc.html" class="cl3-cert"><span class="cl3-ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"></path><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"></path></svg></span><span class="cl3-ct"><b>ISSB Training Partner</b><small>ร⁠า⁠ย⁠แ⁠ร⁠ก​ข⁠อ⁠ง​ไ⁠ท⁠ย</small></span></a></li><li><a href="About-Certificates.dc.html" class="cl3-cert"><span class="cl3-ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path><path d="M9.5 14l1.8 1.8 3.2-3.6"></path></svg></span><span class="cl3-ct"><b>CFO</b><small>ค⁠า⁠ร์⁠บ⁠อ⁠น⁠ฟุ⁠ต⁠พ⁠ริ้⁠น⁠ท์​ข⁠อ⁠ง​อ⁠ง⁠ค์⁠ก⁠ร</small></span></a></li><li><a href="About-Certificates.dc.html" class="cl3-cert"><span class="cl3-ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path><path d="M9.5 14l1.8 1.8 3.2-3.6"></path></svg></span><span class="cl3-ct"><b>BSI (CBAM)</b><small>ใ⁠บ⁠รั⁠บ⁠ร⁠อ⁠ง CBAM</small></span></a></li></ul>
 </div>
 </div>
@@ -2895,7 +2917,6 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <section class="solutions sx" id="solutions" aria-labelledby="sol-h">
 <div class="wrap">
 <div class="sx-head rv">
-<p class="label" style="justify-content:center"><span class="ln"></span>โ⁠ซ⁠ลู⁠ชั⁠น​ข⁠อ⁠ง​เ⁠ร⁠า<span class="ln"></span></p>
 <h2 class="display h2" id="sol-h" style="font-size:calc(clamp(28px,2.6vw,40px)*var(--s));max-width:24ch">IFRS บั⁠ญ⁠ชี⁠ค⁠า⁠ร์⁠บ⁠อ⁠น แ⁠ล⁠ะ ESG <span class="it" style="color:var(--forest)">โ⁠ซ⁠ลู⁠ชั⁠น</span> สำ⁠ห⁠รั⁠บ​บ⁠ริ⁠ษั⁠ท​ไ⁠ท⁠ย</h2>
 </div>
 <ol class="sx-row" role="list">
@@ -2942,7 +2963,7 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <section class="blog bx bx2 bx3" id="blog" aria-labelledby="blog-h">
 <div class="wrap">
 <div class="bx3-head rv">
-<div><p class="label"><span class="ln"></span>บ⁠ท⁠ค⁠ว⁠า⁠ม​แ⁠ล⁠ะ​เ⁠รื่⁠อ⁠ง​ร⁠า⁠ว​ลู⁠ก⁠ค้⁠า</p><h2 class="display h2" id="blog-h">บ⁠ท⁠ค⁠ว⁠า⁠ม​เ⁠รื่⁠อ⁠ง IFRS, ISSB แ⁠ล⁠ะ​บั⁠ญ⁠ชี <span class="it" style="color:var(--forest)">ค⁠า⁠ร์⁠บ⁠อ⁠น</span></h2></div>
+<div><h2 class="display h2" id="blog-h">บ⁠ท⁠ค⁠ว⁠า⁠ม​เ⁠รื่⁠อ⁠ง IFRS, ISSB แ⁠ล⁠ะ​บั⁠ญ⁠ชี <span class="it" style="color:var(--forest)">ค⁠า⁠ร์⁠บ⁠อ⁠น</span></h2></div>
 <a href="Blog.dc.html" class="btn btn-od"><span class="bl"><span>บ⁠ท⁠ค⁠ว⁠า⁠ม​ทั้⁠ง⁠ห⁠ม⁠ด</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 <div class="bx3-row">
@@ -2986,7 +3007,6 @@ html body .lc .th-root.th-root.th-root.th-root .lg4-mark{font-weight:500!importa
 <div class="ov" aria-hidden="true"></div>
 <div class="wrap ctagrid">
 <div class="rv">
-<p class="label"><span class="ln"></span>ติ⁠ด⁠ต่⁠อ​เ⁠ร⁠า</p>
 <h2 class="display h2" style="font-size:calc(clamp(36px,4.4vw,68px)*var(--s));max-width:16ch">พ⁠ร้⁠อ⁠ม​นำ​อ⁠ง⁠ค์⁠ก⁠ร​ข⁠อ⁠ง​ท่⁠า⁠น <span class="it" style="color:var(--forest)">สู่​สั⁠ง⁠ค⁠ม⁠ค⁠า⁠ร์⁠บ⁠อ⁠น⁠ต่ำ​แ⁠ล้⁠ว​ห⁠รื⁠อ​ยั⁠ง</span></h2>
 <p class="lead" style="margin-top:24px;color:var(--muted);font-size:calc(18px*var(--s))">แ⁠จ้⁠ง​ค⁠ว⁠า⁠ม⁠ต้⁠อ⁠ง⁠ก⁠า⁠ร​ข⁠อ⁠ง​ท่⁠า⁠น​เ⁠กี่⁠ย⁠ว​กั⁠บ​ก⁠า⁠ร​เ⁠ปิ⁠ด⁠เ⁠ผ⁠ย⁠ข้⁠อ⁠มู⁠ล​ต⁠า⁠ม​ม⁠า⁠ต⁠ร⁠ฐ⁠า⁠น IFRS S1 แ⁠ล⁠ะ S2 ก⁠า⁠ร​จั⁠ด​ทำ​บั⁠ญ⁠ชี⁠ค⁠า⁠ร์⁠บ⁠อ⁠น ห⁠รื⁠อ​ร⁠า⁠ย⁠ง⁠า⁠น​ค⁠ว⁠า⁠ม⁠ยั่⁠ง⁠ยื⁠น (ESG) ที⁠ม​ที่⁠ป⁠รึ⁠ก⁠ษ⁠า​ข⁠อ⁠ง​เ⁠ร⁠า​จ⁠ะ​ติ⁠ด⁠ต่⁠อ​ก⁠ลั⁠บ​เ⁠พื่⁠อ​ห⁠า⁠รื⁠อ​แ⁠น⁠ว⁠ท⁠า⁠ง​ที่​เ⁠ห⁠ม⁠า⁠ะ​ส⁠ม​กั⁠บ​อ⁠ง⁠ค์⁠ก⁠ร​ข⁠อ⁠ง​ท่⁠า⁠น</p>
 </div>
@@ -3056,6 +3076,20 @@ class Component extends DCLogic {
   // SCALE-START
   saveScale(v) { try { localStorage.setItem('locarb-scale', String(v)); } catch (e) {} this.setState({ scale: v }); }
   // SCALE-END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
