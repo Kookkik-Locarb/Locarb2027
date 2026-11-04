@@ -442,15 +442,17 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
 .lc footer a.f3-on::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#0EA552;margin-right:8px;vertical-align:middle;transform:translateY(-1px)}
 /* NAVCUR-END */
 /* FX2-START */
-/* ===== English running text in STIX Two Text (headings stay Termina; Thai stays Anakotmai) ===== */
-html body .lc{font-family:"STIX Two Text","Anakotmai",serif}
+/* ===== English detail text in Anakotmai (headings/UI stay Termina; accent italics stay STIX) ===== */
+html body .lc{font-family:"Anakotmai","Termina Text",sans-serif}
+html body .lc :is(p,li,dd,address,blockquote,figcaption,.md,[class*="-desc"],[class*="-lead"],[class*="-sub"]):not(.th-root *):not(.label):not([class*="-k"]):not([class*="-h"]):not([class*="fig"]):not([class*="-num"]):not([class*="-f"]):not([class*="-tag"]):not([class*="-cat"]):not(.bx3-date){font-family:"Anakotmai",sans-serif!important;font-weight:300}
+html body .lc :is(p,li,dd,address,.md,[class*="-desc"],[class*="-lead"],[class*="-sub"]):not(.th-root *) :is(b,strong){font-family:inherit;font-weight:500}
 html body .lc .th-root{font-family:"Termina Text","Anakotmai",sans-serif}
-:where(.lc) :where(button,input,select,textarea,label,nav,header,footer .f2-bot,.btn,.chip,.label,small,time,.crumbs,.bh-meta,[class*="-tag"],[class*="-cat"],[class*="-meta"],[class*="-date"]){font-family:"Termina Text","Anakotmai",sans-serif}
+:where(.lc) :where(button,input,select,textarea,label,nav,header,footer .f2-bot,.btn,.chip,.label,time,.crumbs,.bh-meta,[class*="-tag"],[class*="-cat"],[class*="-meta"],[class*="-date"]){font-family:"Termina Text","Anakotmai",sans-serif}
 :where(.lc) :where(input,textarea)::placeholder{font-family:"Termina Text","Anakotmai",sans-serif}
 /* ===== Breathing room before the footer on inner pages ===== */
 html body .lc section:is(.sc-ct,.os9-cta,.ct7-mapband){padding-bottom:128px!important}
 @media (max-width:680px){html body .lc section:is(.sc-ct,.os9-cta,.ct7-mapband){padding-bottom:88px!important}}
-html body .lc :is(.ifx2-sub,.r2-state,[class*="mapcard"] small):not(.th-root *){font-family:"STIX Two Text",serif!important;font-weight:400!important;letter-spacing:0;text-transform:none}
+html body .lc :is(.ifx2-sub,.r2-state,[class*="mapcard"] small):not(.th-root *){font-family:"Anakotmai",sans-serif!important;font-weight:300!important;letter-spacing:0;text-transform:none}
 html body .lc .th-root :is(.ifx2-sub,.r2-state,[class*="mapcard"] small){font-family:"Anakotmai",sans-serif!important}
 /* Home hero: no underline on the highlighted phrase */
 html body .lc .hx-mark{background:none!important;background-image:none!important;text-decoration:none!important;border-bottom:0!important;box-shadow:none!important}
@@ -468,6 +470,12 @@ html body .lc .th-root :is(.crumbs,.nd-crumbs) :is(a,b,span){line-height:1.6!imp
 html body .lc .th-root :is(.cs-np b,.lg4-mark,[class*="fig"],[class*="-num"] b,[class*="-n"] b){line-height:1.35!important}
 html body .lc .th-root :is(.cl3-ct small,.cl3-ct b,.bx3-x){line-height:1.6!important;padding-bottom:.08em}
 html body .lc .th-root .bx3-x{padding-bottom:0}
+/* Home certificates strip: compact section title (EN "Certificates" is long in Termina) */
+html body .lc .cl3-ttl{margin:0!important;font-size:calc(clamp(18px,1.4vw,21px)*var(--s))!important;letter-spacing:-.01em;line-height:1.15!important;white-space:nowrap}
+html body .lc .th-root .cl3-ttl{font-size:calc(clamp(26px,2.3vw,34px)*var(--s))!important;line-height:1.35!important}
+html body .lc :is(small,.csd-st small):not(.th-root *):not(.label *):not(.btn *):not(.chip *){font-family:"Anakotmai",sans-serif}
+/* EN headings: accent words (STIX Two Text italic) follow the heading's case — uppercase headings stay fully uppercase */
+html body .lc :is(h1,h2,h3,h4,.display,.hh,[class*="-h"],[class*="-ttl"],[class*="-title"]):not(.th-root *) :is(.it,em,i){text-transform:inherit!important;letter-spacing:.005em}
 /* FX2-END */
 /* MOB3-START */
 /* ===== Mobile v3 (≤680px): seamless glow, soft curves, 2-up buttons, centred copy ===== */
@@ -858,6 +866,19 @@ class Component extends DCLogic {
   // SCALE-START
   saveScale(v) { try { localStorage.setItem('locarb-scale', String(v)); } catch (e) {} this.setState({ scale: v }); }
   // SCALE-END
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

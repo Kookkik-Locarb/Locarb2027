@@ -444,15 +444,17 @@ html body .lc section.psec:not(.sand):not(.green):not(.ink):not(.dark),html body
 .lc footer a.f3-on::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#0EA552;margin-right:8px;vertical-align:middle;transform:translateY(-1px)}
 /* NAVCUR-END */
 /* FX2-START */
-/* ===== English running text in STIX Two Text (headings stay Termina; Thai stays Anakotmai) ===== */
-html body .lc{font-family:"STIX Two Text","Anakotmai",serif}
+/* ===== English detail text in Anakotmai (headings/UI stay Termina; accent italics stay STIX) ===== */
+html body .lc{font-family:"Anakotmai","Termina Text",sans-serif}
+html body .lc :is(p,li,dd,address,blockquote,figcaption,.md,[class*="-desc"],[class*="-lead"],[class*="-sub"]):not(.th-root *):not(.label):not([class*="-k"]):not([class*="-h"]):not([class*="fig"]):not([class*="-num"]):not([class*="-f"]):not([class*="-tag"]):not([class*="-cat"]):not(.bx3-date){font-family:"Anakotmai",sans-serif!important;font-weight:300}
+html body .lc :is(p,li,dd,address,.md,[class*="-desc"],[class*="-lead"],[class*="-sub"]):not(.th-root *) :is(b,strong){font-family:inherit;font-weight:500}
 html body .lc .th-root{font-family:"Termina Text","Anakotmai",sans-serif}
-:where(.lc) :where(button,input,select,textarea,label,nav,header,footer .f2-bot,.btn,.chip,.label,small,time,.crumbs,.bh-meta,[class*="-tag"],[class*="-cat"],[class*="-meta"],[class*="-date"]){font-family:"Termina Text","Anakotmai",sans-serif}
+:where(.lc) :where(button,input,select,textarea,label,nav,header,footer .f2-bot,.btn,.chip,.label,time,.crumbs,.bh-meta,[class*="-tag"],[class*="-cat"],[class*="-meta"],[class*="-date"]){font-family:"Termina Text","Anakotmai",sans-serif}
 :where(.lc) :where(input,textarea)::placeholder{font-family:"Termina Text","Anakotmai",sans-serif}
 /* ===== Breathing room before the footer on inner pages ===== */
 html body .lc section:is(.sc-ct,.os9-cta,.ct7-mapband){padding-bottom:128px!important}
 @media (max-width:680px){html body .lc section:is(.sc-ct,.os9-cta,.ct7-mapband){padding-bottom:88px!important}}
-html body .lc :is(.ifx2-sub,.r2-state,[class*="mapcard"] small):not(.th-root *){font-family:"STIX Two Text",serif!important;font-weight:400!important;letter-spacing:0;text-transform:none}
+html body .lc :is(.ifx2-sub,.r2-state,[class*="mapcard"] small):not(.th-root *){font-family:"Anakotmai",sans-serif!important;font-weight:300!important;letter-spacing:0;text-transform:none}
 html body .lc .th-root :is(.ifx2-sub,.r2-state,[class*="mapcard"] small){font-family:"Anakotmai",sans-serif!important}
 /* Home hero: no underline on the highlighted phrase */
 html body .lc .hx-mark{background:none!important;background-image:none!important;text-decoration:none!important;border-bottom:0!important;box-shadow:none!important}
@@ -470,6 +472,12 @@ html body .lc .th-root :is(.crumbs,.nd-crumbs) :is(a,b,span){line-height:1.6!imp
 html body .lc .th-root :is(.cs-np b,.lg4-mark,[class*="fig"],[class*="-num"] b,[class*="-n"] b){line-height:1.35!important}
 html body .lc .th-root :is(.cl3-ct small,.cl3-ct b,.bx3-x){line-height:1.6!important;padding-bottom:.08em}
 html body .lc .th-root .bx3-x{padding-bottom:0}
+/* Home certificates strip: compact section title (EN "Certificates" is long in Termina) */
+html body .lc .cl3-ttl{margin:0!important;font-size:calc(clamp(18px,1.4vw,21px)*var(--s))!important;letter-spacing:-.01em;line-height:1.15!important;white-space:nowrap}
+html body .lc .th-root .cl3-ttl{font-size:calc(clamp(26px,2.3vw,34px)*var(--s))!important;line-height:1.35!important}
+html body .lc :is(small,.csd-st small):not(.th-root *):not(.label *):not(.btn *):not(.chip *){font-family:"Anakotmai",sans-serif}
+/* EN headings: accent words (STIX Two Text italic) follow the heading's case — uppercase headings stay fully uppercase */
+html body .lc :is(h1,h2,h3,h4,.display,.hh,[class*="-h"],[class*="-ttl"],[class*="-title"]):not(.th-root *) :is(.it,em,i){text-transform:inherit!important;letter-spacing:.005em}
 /* FX2-END */
 /* MOB3-START */
 /* ===== Mobile v3 (≤680px): seamless glow, soft curves, 2-up buttons, centred copy ===== */
@@ -671,7 +679,7 @@ html body .lc .th-root .bx3-x{padding-bottom:0}
 <sc-if value="{{noPosts}}" hint-placeholder-val="{{ false }}"><p class="empty bh-empty">No articles in this category yet.</p></sc-if>
 <sc-if value="{{hasMore}}" hint-placeholder-val="{{ true }}"><div class="bh-more"><button type="button" class="btn btn-od" onClick="{{more}}"><span class="bl"><span>Load more</span></span></button></div></sc-if>
 </div></section><section class="os9-cta"><svg class="os9-curve" viewBox="0 0 1440 116" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V44C1080 120 360 120 0 44Z" fill="#FFFFFF"></path></svg>
-<div class="os9-cbg" aria-hidden="true"><img src="assets/76a10b9728d986483bbe8ab87e4dd874.webp" alt="" loading="lazy"></div><div class="os9-cov" aria-hidden="true"></div>
+<div class="os9-cbg" aria-hidden="true"><img src="assets/8f82775246aad7f78531e927c08910c7.webp" alt="" loading="lazy"></div><div class="os9-cov" aria-hidden="true"></div>
 <div class="wrap os9-cg">
 <div class="rv"><h2 class="os9-ch">Talk to us about a project <span class="it" >like these</span></h2><p class="os9-cp">Tell us your goal and we will point you to the right solution.</p>
 <div class="os9-cb"><a href="Contact.dc.html" class="btn btn-p"><span class="bl"><span>Contact Us</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="Main.dc.html" class="btn btn-od"><span class="bl"><span>Explore solutions</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div>
@@ -815,7 +823,7 @@ html body .lc .th-root .bx3-x{padding-bottom:0}
 <sc-if value="{{noPosts}}" hint-placeholder-val="{{ false }}"><p class="empty bh-empty">ยั⁠ง​ไ⁠ม่⁠มี​บ⁠ท⁠ค⁠ว⁠า⁠ม​ใ⁠น​ห⁠ม⁠ว⁠ด​นี้</p></sc-if>
 <sc-if value="{{hasMore}}" hint-placeholder-val="{{ true }}"><div class="bh-more"><button type="button" class="btn btn-od" onClick="{{more}}"><span class="bl"><span>ดู​เ⁠พิ่⁠ม​เ⁠ติ⁠ม</span></span></button></div></sc-if>
 </div></section><section class="os9-cta"><svg class="os9-curve" viewBox="0 0 1440 116" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V44C1080 120 360 120 0 44Z" fill="#FFFFFF"></path></svg>
-<div class="os9-cbg" aria-hidden="true"><img src="assets/76a10b9728d986483bbe8ab87e4dd874.webp" alt="" loading="lazy"></div><div class="os9-cov" aria-hidden="true"></div>
+<div class="os9-cbg" aria-hidden="true"><img src="assets/8f82775246aad7f78531e927c08910c7.webp" alt="" loading="lazy"></div><div class="os9-cov" aria-hidden="true"></div>
 <div class="wrap os9-cg">
 <div class="rv"><h2 class="os9-ch">คุ⁠ย​กั⁠บ​เ⁠ร⁠า​เ⁠รื่⁠อ⁠ง​โ⁠ป⁠ร⁠เ⁠จ⁠ก⁠ต์ <span class="it" >แ⁠บ⁠บ​นี้</span></h2><p class="os9-cp">บ⁠อ⁠ก​เ⁠ป้⁠า⁠ห⁠ม⁠า⁠ย​ข⁠อ⁠ง​คุ⁠ณ แ⁠ล้⁠ว​เ⁠ร⁠า​จ⁠ะ​แ⁠น⁠ะ⁠นำ​โ⁠ซ⁠ลู⁠ชั⁠น​ที่​เ⁠ห⁠ม⁠า⁠ะ​ส⁠ม</p>
 <div class="os9-cb"><a href="Contact.dc.html" class="btn btn-p"><span class="bl"><span>ติ⁠ด⁠ต่⁠อ​เ⁠ร⁠า</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="Main.dc.html" class="btn btn-od"><span class="bl"><span>ดู​โ⁠ซ⁠ลู⁠ชั⁠น​ทั้⁠ง⁠ห⁠ม⁠ด</span></span> <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div>
@@ -856,6 +864,19 @@ class Component extends DCLogic {
   // SCALE-START
   saveScale(v) { try { localStorage.setItem('locarb-scale', String(v)); } catch (e) {} this.setState({ scale: v }); }
   // SCALE-END
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
