@@ -578,8 +578,49 @@ html body .lc section.os9-cta{--cv:clamp(48px,7.5vw,116px);position:relative;z-i
 html body .lc section.os9-cta > .os9-curve{display:none!important}
 html body .lc section:has(+ section.os9-cta)::after{content:"";display:block;height:var(--cv27,clamp(48px,7.5vw,116px))}
 @media (max-width:680px){html body .lc section.os9-cta{--cv:48px}html body .lc section:has(+ section.os9-cta){--cv27:48px}}
+/* Contact CTA: compact band — no phone/email/address cards (they live in the footer), buttons on the right */
+html body .lc section.os9-cta .os9-qs-w{display:none!important}
+html body .lc section.os9-cta{padding:calc(var(--cv) + clamp(40px,4vw,64px)) 0 clamp(56px,5vw,80px)!important;min-height:0!important}
+html body .lc section.os9-cta .os9-cg{display:block!important}
+html body .lc section.os9-cta .os9-cg > .rv{display:grid!important;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"h b" "p b";column-gap:clamp(32px,5vw,80px);row-gap:16px;align-items:center}
+html body .lc section.os9-cta .os9-ch{grid-area:h;margin:0!important;max-width:none!important}
+html body .lc section.os9-cta .os9-cp{grid-area:p;margin:0!important}
+html body .lc section.os9-cta .os9-cb{grid-area:b;margin:0!important;justify-content:flex-end;flex-wrap:nowrap!important;align-self:center}
+@media (max-width:900px){
+  html body .lc section.os9-cta .os9-cg > .rv{grid-template-columns:1fr;grid-template-areas:"h" "p" "b"}
+  html body .lc section.os9-cta .os9-cb{justify-content:flex-start;margin-top:8px!important}
+}
+@media (max-width:680px){html body .lc section.os9-cta .os9-cb{justify-content:center}html body .lc section.os9-cta{padding-bottom:56px!important}}
+@media (max-width:680px){html body .lc section.os9-cta .os9-cb .btn .bl,html body .lc section.os9-cta .os9-cb .btn .bl span{white-space:normal!important;overflow:visible!important;height:auto!important;text-overflow:clip!important}}
 
 /* CV27-END */
+/* PRIM27-START */
+/* Primary buttons: brand green #0EA552 only (no dark-green / black fills, including hover) */
+html body .lc .btn.btn-p,html body .lc .btn.btn-p:hover,html body .lc .btn.btn-p:focus-visible,html body .lc .btn.btn-p:active,
+html body .lc .cx6-main .btn-p,html body .lc .cx6-main .btn-p:hover{background:#0EA552!important;background-color:#0EA552!important;border-color:#0EA552!important;color:#fff!important}
+html body .lc .btn.btn-p::before,html body .lc .btn.btn-p::after{background:#0EA552!important}
+html body .lc .btn.btn-p:hover,html body .lc .btn.btn-p:focus-visible{box-shadow:0 14px 28px -14px rgba(14,165,82,.85)!important;transform:translateY(-1px)}
+html body .lc .btn.btn-p .ar{background:rgba(255,255,255,.2)!important;color:#fff!important}
+html body .lc .btn.btn-p:hover .ar,html body .lc .btn.btn-p:focus-visible .ar{background:#fff!important;color:#0EA552!important}
+html body .lc .c27-pdf,html body .lc .c27-pdf:hover,html body .lc .c27-pdf:focus-visible{background:#0EA552!important}
+/* Two-font headings: STIX Two Text accents at Bold so they hold their weight next to Termina Bold */
+html body .lc :is(h1,h2,h3,h4,.display,.hh,[class*="-h"]:is(h1,h2,h3,p),[class*="-ttl"],[class*="-title"]):not(.th-root *) :is(.it,em,i),
+html body .lc .th-root .hh :is(.it,em,i),html body .lc .th-root .xen:has(> .it),html body .lc .th-root :is(.it,em) .xen{font-weight:700!important}
+/* News / article cards: title max 2 lines; category pill on the image smaller in EN (optically = TH) */
+html body .lc .bx3-t,html body .lc .bh-feat-t{display:-webkit-box!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:2!important;line-clamp:2;overflow:hidden!important}
+html body .lc .bx3-t a{display:inline}
+html body .lc .bx3-cat:not(.th-root *){font-family:"Termina",sans-serif!important;font-weight:700!important;font-size:calc(9px*var(--s))!important;letter-spacing:.06em!important;text-transform:uppercase!important;padding:6px 11px!important}
+html body .lc .th-root .bx3-cat{font-size:calc(12px*var(--s))!important;padding:5px 11px!important}
+/* EN: every stat figure in Termina */
+html body .lc :is(.hx12-stats b,.ab5-float b,.ab5-badge b,.lg4-f b,.os10-fig b,.ifp-yr b,.ss .sn,.cs-ng b,.cs-sn,.cs-pd,.csd-num,.tl2-y,.os9-dn,.ifp-n,.ce2-year,.c27-yr,[class*="stat"] b,[class*="-num"] b,[class*="-fig"] b,[class*="kpi"] b):not(.th-root *){font-family:"Termina",sans-serif!important;font-weight:700!important;font-style:normal!important}
+/* TH: Anakotmai only — numbers and English words included (Home hero keeps its EN headline treatment; TH/EN switch keeps Termina) */
+html body .lc .th-root *:not(svg):not(svg *):not(.hx12 .hx10-tag):not(.hx12 .hx10-tag *):not(.nu-btn b):not(.nu-btn b *):not(.nu-code):not(.nu-code *):not(.f2-lang *):not(.mn-seg button):not(.mn-seg button *),
+html body .lc .th-root *:not(.hx12 .hx10-tag):not(.hx12 .hx10-tag *)::before,html body .lc .th-root *:not(.hx12 .hx10-tag):not(.hx12 .hx10-tag *)::after{font-family:"Anakotmai",sans-serif!important;font-style:normal}
+html body .lc .th-root .xen{font-size:1em!important;font-weight:inherit;letter-spacing:0!important}
+/* Solution pages: contact section keeps the form + map only (phone / email / address are in the footer) */
+html body .lc section.sc-ct ul.cbar{display:none!important}
+
+/* PRIM27-END */
 </style>
 </helmet>
 <div class="lc" id="page-top" style="--s: {{scale}}">
@@ -931,6 +972,13 @@ class Component extends DCLogic {
 
 
 
+
+
+
+
+
+
+
   // RVFX-JS-START
   // ---- scroll reveal (sections float up when reached) ----
   componentDidMount() { this.rvSetup(); }
@@ -1096,7 +1144,7 @@ class Component extends DCLogic {
     const s = this.state.scale; const st = this.state;
     const base = { scale: s, szS: s < 1 ? 'on' : '', szM: s === 1 ? 'on' : '', szL: s > 1 ? 'on' : '',
       setS: () => this.saveScale(0.9), setM: () => this.saveScale(1), setL: () => this.saveScale(1.12) };
-    const P = [{"img": "assets/47bbf8f5b3c6f8b5430865f4e407beb9.webp", "cat": "News & events", "tag": "Event", "t": "LO-CARB welcomes partners and guests at its sustainability event", "h": "Blog-News-Detail.dc.html", "d": "14 Oct 2026", "pid": "a01"}, {"img": "assets/acea1900cc76bb1ae25f3140c738e2dd.webp", "cv": "cv1", "cat": "Portfolio", "tag": "IFRS", "t": "A SET-listed manufacturer: IFRS S1 & S2 readiness in 12 weeks", "h": "Blog-News-Detail.dc.html", "d": "14 Oct 2026", "pid": "a02"}, {"img": "assets/8f8174b9c50e05e0172f98487b371cb0.webp", "cv": "cv4", "cat": "Knowledge base", "tag": "IFRS", "t": "What IFRS S2 means for SET-listed companies", "h": "Blog-News-Detail.dc.html", "d": "2 Oct 2026", "pid": "a03"}, {"img": "assets/2a5cb2eef146155225ad94f3e2fcd853.webp", "cat": "News & events", "tag": "Event", "t": "Highlights from LO-CARB’s partner event", "h": "Blog-News-Detail.dc.html", "d": "14 Oct 2026", "pid": "a04"}, {"img": "assets/047a45f90dd489c5c0720e07750cf2e7.webp", "cv": "cv2", "cat": "Portfolio", "tag": "CarbonCal", "t": "A national food producer: measuring Scope 1–3 with CarbonCal", "h": "Blog-News-Detail.dc.html", "d": "19 Sep 2026", "pid": "a05"}, {"img": "assets/abf3912d1a0616028ddbd2bc03f612ad.webp", "cv": "cv7", "cat": "Knowledge base", "tag": "IFRS", "t": "IFRS S1 vs S2: what each standard asks for", "h": "Blog-News-Detail.dc.html", "d": "12 Sep 2026", "pid": "a06"}, {"img": "assets/b1a0c09a559090138614b3c5c426b977.webp", "cv": "cv3", "cat": "News & events", "tag": "ISSB", "t": "ISSB for Boards workshop returns to Bangkok on 21 Nov", "h": "Blog-News-Detail.dc.html", "d": "5 Sep 2026", "pid": "a07"}, {"img": "assets/f04f71502a34190bfb355066c95eb830.webp", "cv": "cv6", "cat": "Portfolio", "tag": "Carbon Scout", "t": "A rubber plantation group: tracking plantation carbon with Carbon Scout", "h": "Blog-News-Detail.dc.html", "d": "28 Aug 2026", "pid": "a08"}, {"img": "assets/edb5ae5e167e8554cada59c2b4664212.webp", "cv": "cv5", "cat": "Knowledge base", "tag": "CarbonCal", "t": "Scope 1, 2 and 3 emissions explained", "h": "Blog-News-Detail.dc.html", "d": "22 Aug 2026", "pid": "a09"}, {"img": "assets/020d21a38d37570d4a214c8bf020799d.webp", "cv": "cv8", "cat": "Portfolio", "tag": "Reporting", "t": "A private hospital group: a first sustainability report in one cycle", "h": "Blog-News-Detail.dc.html", "d": "8 Aug 2026", "pid": "a10"}, {"img": "assets/886cc0ad2d233798f21242784066a3e7.webp", "cv": "cv2", "cat": "News & events", "tag": "Carbon Scout", "t": "LO-CARB and a farming cooperative team up on farmland carbon", "h": "Blog-News-Detail.dc.html", "d": "1 Aug 2026", "pid": "a11"}, {"img": "assets/b4f421a9c4705fb253837a88078000d8.webp", "cv": "cv1", "cat": "Knowledge base", "tag": "CarbonCal", "t": "How to start collecting Scope 3 supplier data", "h": "Blog-News-Detail.dc.html", "d": "25 Jul 2026", "pid": "a12"}, {"img": "assets/662ab3a2fa90fca5090fd3badfb4c529.webp", "cv": "cv4", "cat": "Portfolio", "tag": "ISSB", "t": "A listed energy company: ISSB training for the board", "h": "Blog-News-Detail.dc.html", "d": "18 Jul 2026", "pid": "a13"}, {"img": "assets/5e3500e8b05b65d35b9695f4a30d8fac.webp", "cv": "cv7", "cat": "News & events", "tag": "CarbonCal", "t": "CarbonCal adds Scope 3 category templates", "h": "Blog-News-Detail.dc.html", "d": "11 Jul 2026", "pid": "a14"}];
+    const P = [{"img": "assets/ba5abd30e940cfa66f03aa8accdd9b01.webp", "cat": "News & events", "tag": "Event", "t": "LO-CARB welcomes partners and guests at its sustainability event", "h": "Blog-News-Detail.dc.html", "d": "14 Oct 2026", "pid": "a01"}, {"img": "assets/d0cbf9a3d60a427f35ab1ff270c83a64.webp", "cv": "cv1", "cat": "Portfolio", "tag": "IFRS", "t": "A SET-listed manufacturer: IFRS S1 & S2 readiness in 12 weeks", "h": "Blog-News-Detail.dc.html", "d": "14 Oct 2026", "pid": "a02"}, {"img": "assets/f1b8baf60419a5fe44ca4b10a1494846.webp", "cv": "cv4", "cat": "Knowledge base", "tag": "IFRS", "t": "What IFRS S2 means for SET-listed companies", "h": "Blog-News-Detail.dc.html", "d": "2 Oct 2026", "pid": "a03"}, {"img": "assets/42f8d47a0e711f82f8834d37a6eaf437.webp", "cat": "News & events", "tag": "Event", "t": "Highlights from LO-CARB’s partner event", "h": "Blog-News-Detail.dc.html", "d": "14 Oct 2026", "pid": "a04"}, {"img": "assets/316f9c117f6f511e717c6f73d92a407f.webp", "cv": "cv2", "cat": "Portfolio", "tag": "CarbonCal", "t": "A national food producer: measuring Scope 1–3 with CarbonCal", "h": "Blog-News-Detail.dc.html", "d": "19 Sep 2026", "pid": "a05"}, {"img": "assets/f81198bcbf987e3681ac90425bc907a9.webp", "cv": "cv7", "cat": "Knowledge base", "tag": "IFRS", "t": "IFRS S1 vs S2: what each standard asks for", "h": "Blog-News-Detail.dc.html", "d": "12 Sep 2026", "pid": "a06"}, {"img": "assets/217a0656a54bc69ea1fe245543be312d.webp", "cv": "cv3", "cat": "News & events", "tag": "ISSB", "t": "ISSB for Boards workshop returns to Bangkok on 21 Nov", "h": "Blog-News-Detail.dc.html", "d": "5 Sep 2026", "pid": "a07"}, {"img": "assets/f4a0f50b5c33578dca9ad757515da689.webp", "cv": "cv6", "cat": "Portfolio", "tag": "Carbon Scout", "t": "A rubber plantation group: tracking plantation carbon with Carbon Scout", "h": "Blog-News-Detail.dc.html", "d": "28 Aug 2026", "pid": "a08"}, {"img": "assets/f5cf92d31b2f7b661be9c36f74bd8b91.webp", "cv": "cv5", "cat": "Knowledge base", "tag": "CarbonCal", "t": "Scope 1, 2 and 3 emissions explained", "h": "Blog-News-Detail.dc.html", "d": "22 Aug 2026", "pid": "a09"}, {"img": "assets/5b77e9dab7a1625e2f3837ef18b8a88b.webp", "cv": "cv8", "cat": "Portfolio", "tag": "Reporting", "t": "A private hospital group: a first sustainability report in one cycle", "h": "Blog-News-Detail.dc.html", "d": "8 Aug 2026", "pid": "a10"}, {"img": "assets/b045c0365346a5aae180791d0b9c8309.webp", "cv": "cv2", "cat": "News & events", "tag": "Carbon Scout", "t": "LO-CARB and a farming cooperative team up on farmland carbon", "h": "Blog-News-Detail.dc.html", "d": "1 Aug 2026", "pid": "a11"}, {"img": "assets/0ba48079dc8a9b227fa3ee6e1b7e73f7.webp", "cv": "cv1", "cat": "Knowledge base", "tag": "CarbonCal", "t": "How to start collecting Scope 3 supplier data", "h": "Blog-News-Detail.dc.html", "d": "25 Jul 2026", "pid": "a12"}, {"img": "assets/88b8013b59ce4274dbc3c9bc9048a4b1.webp", "cv": "cv4", "cat": "Portfolio", "tag": "ISSB", "t": "A listed energy company: ISSB training for the board", "h": "Blog-News-Detail.dc.html", "d": "18 Jul 2026", "pid": "a13"}, {"img": "assets/d18620255d76f6dc7efb313aa12bac67.webp", "cv": "cv7", "cat": "News & events", "tag": "CarbonCal", "t": "CarbonCal adds Scope 3 category templates", "h": "Blog-News-Detail.dc.html", "d": "11 Jul 2026", "pid": "a14"}];
     const T = ["All", "IFRS", "CarbonCal", "ISSB", "Carbon Scout", "Reporting"];
     const CATS = [["All", null], ["Knowledge base", "Knowledge base"], ["News & events", "News & events"]];
     const FILES = ['Blog-Articles.html', 'Blog-Knowledge.html', 'Blog-News.html'];
